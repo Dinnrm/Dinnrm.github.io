@@ -1,6 +1,6 @@
 /* ============================================
-   Dinnrm — 个人设计作品集（中文）
-   纯 HTML/CSS，无框架、无 CDN
+   Dinnrm — 个人设计作品集（React + Vite）
+   纯自定义 CSS，无框架
    ============================================ */
 
 :root {
@@ -16,8 +16,8 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC",
-    "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'Segoe UI', sans-serif;
   background: var(--bg);
   color: var(--ink);
   line-height: 1.7;
@@ -25,6 +25,7 @@ body {
 }
 
 a { color: inherit; text-decoration: none; }
+button { font-family: inherit; }
 
 /* ---------- 头部 ---------- */
 .site-header {
@@ -121,10 +122,24 @@ a { color: inherit; text-decoration: none; }
   align-items: baseline;
   border-bottom: 1px solid var(--line);
   padding-bottom: 0.9rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 .section-head h2 { font-size: 1.6rem; letter-spacing: -0.02em; }
 .count { color: var(--muted); font-size: 0.9rem; }
+
+.filters { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 2rem; }
+.chip {
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--muted);
+  padding: 0.4rem 0.95rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.chip:hover { border-color: var(--ink); color: var(--ink); }
+.chip.active { background: var(--ink); color: #fff; border-color: var(--ink); }
 
 .grid {
   display: grid;
