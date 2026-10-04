@@ -1,19 +1,15 @@
 export default function Hero() {
   return (
     <section className="hero">
-      <p className="eyebrow">个人作品集 — 2026</p>
+      <p className="eyebrow">Portfolio — 丁若木 Dinnrm</p>
       <h1>
-        你好，我是 <em>Dinnrm</em>，
-        <br />
-        一名热爱视觉的设计师。
+        视觉传达设计，<br />
+        品牌 · 海报 · <em>书籍</em>。
       </h1>
       <p className="hero-sub">
-        专注于品牌识别、平面排版与影像表达。相信好的设计来自对细节、
-        留白与节奏的反复推敲。
+        我是丁若木，常驻青岛与济南。专注品牌视觉系统、海报与书籍装帧，
+        也用摄影摄像记录生活。
       </p>
-      <a className="scroll-hint" href="#about">
-        了解我 ↓
-      </a>
     </section>
   )
 }

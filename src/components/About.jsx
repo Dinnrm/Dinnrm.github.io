@@ -1,26 +1,33 @@
+import { profile } from '../data/content.js'
+import portrait from '../assets/portrait.png'
+
 export default function About() {
   return (
-    <section id="about" className="intro">
-      <div className="intro-avatar" aria-hidden="true">
-        D
-      </div>
-      <div className="intro-body">
-        <h2>关于我</h2>
-        <p className="intro-lead">
-          我是一名设计师，日常工作围绕品牌视觉、海报与书籍展开，
-          也用摄影记录生活。这里是我的作品预览，欢迎翻阅。
-        </p>
-        <ul className="facts">
-          <li>
-            <span>方向</span>品牌 · 平面 · 影像
-          </li>
-          <li>
-            <span>所在地</span>中国 · 青岛
-          </li>
-          <li>
-            <span>状态</span>接受合作邀约
-          </li>
-        </ul>
+    <section id="about" className="section about">
+      <p className="section-label">Profile</p>
+      <div className="about-wrap">
+        <img className="portrait" src={portrait} alt="丁若木的肖像照" />
+        <div className="about-body">
+          <h2 className="section-title" style={{ marginBottom: '1rem' }}>
+            {profile.name}
+            <span className="pinyin"> / {profile.pinyin}</span>
+          </h2>
+          <p className="about-intro">{profile.intro}</p>
+          <ul className="facts">
+            <li>
+              <span>常用软件</span>
+              {profile.skills.join(' · ')}
+            </li>
+            <li>
+              <span>常驻</span>
+              {profile.location}
+            </li>
+            <li>
+              <span>热爱</span>
+              {profile.hobby}
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
   )
