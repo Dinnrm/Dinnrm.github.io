@@ -1,81 +1,52 @@
-# 项目交接文档 (HANDOVER)
+# 项目交接文档
 
-> 最后更新：2026-09-27
-> 用途：下次打开这个项目时，先读这一份，就能直接接着做。
+最后更新：2026-10-05
 
-## 这是什么
+## 当前实现
 
-Dinnrm 的个人设计作品集网站，托管在 GitHub Pages。
-技术栈：**React 18 + Vite 6**（纯自定义 CSS，无 UI 框架），按 visual-content-websites skill 搭建。
+丁若木 / Dinnrm 的个人设计作品集。React 18 + Vite 6，自定义 CSS；GitHub Actions 构建 `dist/` 并发布到 GitHub Pages，部署配置保持原样。
 
-- **GitHub 仓库**：https://github.com/Dinnrm/Dinnrm.github.io
-- **线上地址**：https://dinnrm.github.io/
-- **本地路径**：`~/Documents/GitHub/Dinnrm.github.io`
-- **部署方式**：push 到 `main` → GitHub Actions（`.github/workflows/deploy.yml`）自动 `npm ci && npm run build` 并发布 `dist/`。Pages 的 Source 已设为 **GitHub Actions**。
+- 网站：https://dinnrm.github.io/
+- 仓库：https://github.com/Dinnrm/Dinnrm.github.io
+- 当前改版分支：`codex/portfolio-redesign`
+- 本次为本地设计改版，尚未发布。
 
-## 当前状态（2026-09-27）
+## 设计与功能
 
-- [x] Node 22 / npm 已就绪；React + Vite 工程已搭建并成功构建
-- [x] GitHub Actions 部署流水线跑通，线上已是 React 版
-- [x] 页面：Hero → 关于我 → 作品（全部/品牌/海报/书籍/摄影 可筛选）→ 联系
-- [ ] 作品图、头像、真实文案、真实邮箱仍是占位
-- [ ] 自定义域名未配置（等购买后再做）
+依据用户提供的 `visual-content-websites` README 与 SKILL 改版：暖白底、深色文字、朱红强调色、衬线标题、保留完整肖像的纸张式展示。
 
-## 目录结构
+由原先切换单个视图改为连续单页浏览，七个区块全部保留：主页、落地项目、设计、摄影、教育、获奖、联系。每个区块有原生锚点链接，桌面导航随滚动更新，手机菜单支持选择后关闭、Escape 关闭和焦点恢复。
 
-```
-Dinnrm.github.io/
-├── index.html              # Vite 入口
-├── package.json
-├── vite.config.js
-├── .github/workflows/deploy.yml   # Actions 自动部署
-├── src/
-│   ├── main.jsx            # 入口
-│   ├── App.jsx             # 页面组装
-│   ├── styles.css          # 全部样式（改配色在 :root）
-│   ├── data/
-│   │   └── works.js        # 作品数据（加真实作品在这里加条目）
-│   └── components/
-│       ├── Header.jsx  Hero.jsx  About.jsx
-│       ├── WorkSection.jsx  WorkCard.jsx
-│       ├── Contact.jsx  Footer.jsx
-└── HANDOVER.md
-```
+设计分类筛选使用按钮选中状态和结果播报。中英文内容覆盖导航、正文、奖项、项目、可访问标签和页面元信息。深浅色默认跟随系统，手动偏好与语言保存在浏览器内并跨标签页同步；存储不可用时仍能切换。
 
-## 日常开发命令
+## 内容保留与资产
 
-```bash
-cd ~/Documents/GitHub/Dinnrm.github.io
+`src/data/content.js`、`src/data/works.js` 和原始 `src/assets/portrait.png` 均未改动。
 
-# 本地开发（热更新），浏览器访问 http://localhost:5173
-npm run dev
+已展示完整个人介绍、4 个项目、15 项奖项、4 个设计分类、2 个摄影分类、教育经历及原有软件技能。未增加未经提供的项目、奖项、作品照片或联系资料。
 
-# 本地预览生产构建（等同线上效果）
-npm run build && npm run preview
+肖像生成两个保持完整画面的展示副本，通过 `srcset` 按需加载：600 × 800 JPEG（约 70 KB）与 1050 × 1400 JPEG（约 176 KB）。原始约 2 MB 的 PNG 保留。
 
-# 提交上线（Actions 会自动构建部署，等约 1 分钟）
-git add .
-git commit -m "写清楚改了什么"
-git push origin main
-```
+## 维护入口
 
-> 注意：改完代码**不需要手动部署**，push 后 Actions 自动构建。
-> 可在仓库 Actions 页查看构建状态，或 `gh run list`。
+- `src/App.jsx`：当前页面与交互。
+- `src/styles.css`：全部视觉样式；配色集中在根级语义变量。
+- `src/data/content.js`：原始中文内容。
+- `src/data/works.js`：原有分类说明。
+- `src/data/translations.js`：中英文对应内容。
+- `src/hooks/usePreferences.js`：偏好、语言和主题逻辑。
+- `index.html`：启动时应用偏好，避免主题闪烁。
 
-## 下次要继续做的事
+`src/components/` 中的早期组件未启用，部分引用的旧数据字段已不在当前数据内。不要直接接入这些组件；使用当前 App，或先对齐数据再复用。
 
-1. **加真实作品**：在 `src/data/works.js` 里追加条目；图片放到 `src/assets/` 或 `public/images/`，在 WorkCard 里用 `<img>` 替换渐变色块。
-2. **替换占位**：头像（About.jsx）、邮箱（Contact.jsx 的 hello@example.com）、自我介绍文案。
-3. **后续可扩展**（按 skill）：图片灯箱（dialog 模态 + 键盘左右切换）、深色模式、作品详情页。
-4. **自定义域名**：买好后告诉我域名 + DNS 服务商 + 根域/www，再配 Pages Custom Domain。
+## 验证与后续
 
-## 环境备忘（这台电脑）
+验证记录见 `DESIGN_QA.md`。项目没有现成的 lint 或 test 脚本；使用实际 Vite 生产构建和浏览器交互检查。
 
-- **必须开代理才能连 GitHub**：本机 Clash 在 `127.0.0.1:7890`，已写入 git 全局配置：
-  ```bash
-  git config --global http.proxy  http://127.0.0.1:7890
-  git config --global https.proxy http://127.0.0.1:7890
-  ```
-- **npm 走代理**（首次 install 时）：`HTTP_PROXY=http://127.0.0.1:7890 HTTPS_PROXY=http://127.0.0.1:7890 npm install`
-- **GitHub 登录**：`gh auth status`；如掉登录运行 `gh auth login`。当前 token 已含 `workflow` scope（推送 Actions 文件需要）。
-- Git 身份：`Dinnrm` / `dinnrm020920@gmail.com`。
+后续可替换的现有占位：
+
+1. `hello@example.com` 仍为原有示例邮箱，页面明确标为待更新。
+2. 当前设计和摄影只展示分类，尚无真实作品图。加入真实资产时保留作者、说明、图片尺寸和原片，避免把分类封面当成作品。
+3. 自定义域名尚未配置。
+
+常规命令：`npm ci`、`npm run dev`、`npm run build`、`npm run preview`。推送 `main` 会自动发布，因此发布应在用户确认要上线后执行。
