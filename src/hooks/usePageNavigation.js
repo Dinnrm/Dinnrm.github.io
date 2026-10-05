@@ -2,7 +2,7 @@ import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 
 export const NAV_PAGES = ['home', 'education', 'awards', 'works', 'photos', 'contact']
 export const ALL_PAGES = NAV_PAGES
-export const CONTINUOUS_PAGES = ['home', 'works', 'photos', 'education', 'awards', 'contact']
+export const CONTINUOUS_PAGES = NAV_PAGES
 // A wide mouse/trackpad viewport uses pages. Touch-capable devices retain the
 // scroll layout, even when an iPad is using a trackpad or desktop-site mode.
 export const DESKTOP_QUERY = '(min-width: 1100px) and (hover: hover) and (pointer: fine)'
@@ -21,9 +21,18 @@ export function usePageNavigation() {
   const [route, setRoute] = useState(() => pageFromHash(window.location.hash))
   const [desktopMode, setDesktopMode] = useState(() => shouldUseIndividualPages(window.matchMedia(DESKTOP_QUERY).matches, navigator.maxTouchPoints))
   const [scrollActive, setScrollActive] = useState(route)
+  const [navigationVersion, setNavigationVersion] = useState(0)
   const active = desktopMode ? route : scrollActive
   const activeRef = useRef(active)
   activeRef.current = active
+
+  useLayoutEffect(() => {
+    // Hash routes own their position, including reload and browser history.
+    // Native restoration must not overwrite the section after we place it.
+    const previous = window.history.scrollRestoration
+    window.history.scrollRestoration = 'manual'
+    return () => { window.history.scrollRestoration = previous }
+  }, [])
 
   useEffect(() => {
     const media = window.matchMedia(DESKTOP_QUERY)
@@ -53,9 +62,21 @@ export function usePageNavigation() {
       const canonical = `#/${route}`
       if (window.location.hash !== canonical) window.history.replaceState(null, '', canonical)
     }
-    if (desktopMode) window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
-    else document.getElementById(route)?.scrollIntoView({ behavior: 'instant' })
-  }, [route, desktopMode])
+    // Wait for the menu to close and the responsive layout to commit. A fresh
+    // request also positions the same route again after manual scrolling.
+    const frame = requestAnimationFrame(() => {
+      if (desktopMode || route === 'home') {
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+        return
+      }
+      const target = document.getElementById(route)
+      if (!target) return
+      const heading = target.querySelector('h1, h2') || target
+      const offset = (document.querySelector('.site-header')?.getBoundingClientRect().height || 0) + 14
+      window.scrollTo({ top: Math.max(0, window.scrollY + heading.getBoundingClientRect().top - offset), left: 0, behavior: 'instant' })
+    })
+    return () => cancelAnimationFrame(frame)
+  }, [route, desktopMode, navigationVersion])
 
   useEffect(() => {
     if (desktopMode) return
@@ -65,7 +86,11 @@ export function usePageNavigation() {
       frame = requestAnimationFrame(() => {
         frame = 0
         const bottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 4
-        const current = [...CONTINUOUS_PAGES].reverse().find(id => document.getElementById(id)?.getBoundingClientRect().top <= 160)
+        const offset = (document.querySelector('.site-header')?.getBoundingClientRect().height || 0) + 15
+        const current = [...CONTINUOUS_PAGES].reverse().find(id => {
+          const section = document.getElementById(id)
+          return (section?.querySelector('h1, h2') || section)?.getBoundingClientRect().top <= offset
+        })
         setScrollActive(bottom ? 'contact' : current || 'home')
       })
     }
@@ -86,10 +111,8 @@ export function usePageNavigation() {
     const hash = `#/${page}`
     if (window.location.hash !== hash) window.history.pushState(null, '', hash)
     setRoute(page)
-    if (!desktopMode) {
-      setScrollActive(page)
-      document.getElementById(page)?.scrollIntoView({ behavior: 'instant' })
-    } else if (page === route) window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+    setNavigationVersion(version => version + 1)
+    if (!desktopMode) setScrollActive(page)
   }
 
   return { view: active, desktopMode, navigate }

@@ -49,16 +49,18 @@ export default function App() {
   }, [view, lang, menuOpen, desktopMode])
 
   useEffect(() => {
-    setMenuOpen(false)
-  }, [view])
-
-  useEffect(() => {
     if (!menuOpen) return
-    const frame = requestAnimationFrame(() => nav.current.querySelector('a')?.focus())
+    const top = window.scrollY
+    const left = window.scrollX
+    const frame = requestAnimationFrame(() => {
+      nav.current.querySelector('a')?.focus({ preventScroll: true })
+      // Some embedded/mobile browsers still scroll sticky descendants on focus.
+      window.scrollTo({ top, left, behavior: 'instant' })
+    })
     const close = (event) => {
       if (event.key === 'Escape') {
         setMenuOpen(false)
-        menuButton.current?.focus()
+        menuButton.current?.focus({ preventScroll: true })
       }
     }
     const desktop = window.matchMedia('(min-width: 1100px)')

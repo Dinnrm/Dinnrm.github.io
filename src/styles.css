@@ -45,7 +45,7 @@ svg { display: block; width: 20px; height: 20px; flex: none; }
 .skip-link:focus { transform: none; }
 
 /* Header: compact, stable, and readable in both themes. */
-.site-header { position: sticky; top: 0; z-index: 5; background: var(--header); border-bottom: 1px solid var(--line); }
+.site-header { position: sticky; top: 0; z-index: 5; background: var(--header); border-bottom: 1px solid var(--line); overflow-anchor: none; }
 .header-inner { width: min(1320px, calc(100% - 80px)); margin-inline: auto; height: 86px; display: flex; align-items: center; justify-content: space-between; gap: 36px; }
 .wordmark { font-size: 28px; font-weight: 650; letter-spacing: -.065em; line-height: 1; }
 .brand-dot { color: var(--accent); }
