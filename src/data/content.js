@@ -32,10 +32,10 @@ export const awards = [
 
 // 落地项目
 export const projects = [
-  { tag: '社会服务', title: '「艺心为民」视觉系统', desc: '济南市文化馆视觉系统设计，涵盖标志、导视与活动物料，已落地。', dark: true },
-  { tag: '赛事视觉', title: '昆仑谣·数字文旅大赛', desc: '第19届全国3D大赛山东赛区视觉系统设计，已落地。', dark: false },
-  { tag: '校园服务', title: '暑期基建视觉设计', desc: '山东艺术学院暑期基建项目设计服务，已落地。', dark: false },
-  { tag: '演出视觉', title: '音乐剧《花儿永远这样红》', desc: '演出主视觉及配套物料设计，并完成相关书籍装帧。', dark: true },
+  { tag: '社会服务', title: '「艺心为民」视觉系统', desc: '济南市文化馆视觉系统设计，涵盖标志、导视与活动物料。', categories: ['brand', 'visual'], dark: true },
+  { tag: '赛事视觉', title: '昆仑谣·数字文旅大赛', desc: '第19届全国3D大赛山东赛区视觉系统设计。', categories: ['visual'], dark: false },
+  { tag: '校园服务', title: '暑期基建视觉设计', desc: '山东艺术学院暑期基建项目设计服务。', categories: ['visual'], dark: false },
+  { tag: '演出视觉', title: '音乐剧《花儿永远这样红》', desc: '演出主视觉及配套物料设计，并完成相关书籍装帧。', categories: ['visual', 'book'], dark: true },
 ]
 
 // 设计作品分类

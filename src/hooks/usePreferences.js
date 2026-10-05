@@ -54,11 +54,12 @@ export function usePreferences() {
     },
     setLang(value) {
       // Keep the current section in view when translated text changes its height.
-      const current = [...document.querySelectorAll('main > section')].reverse().find((section) => section.getBoundingClientRect().top <= 140)
+      const current = [...document.querySelectorAll('main section')].reverse().find((section) => section.getBoundingClientRect().top <= 140)
       const top = current?.getBoundingClientRect().top
       updateLang(value)
       try { localStorage.setItem('dinnrm-lang', value) } catch { /* Keep the in-memory choice. */ }
       if (current) requestAnimationFrame(() => {
+        if (!current.isConnected) return
         window.scrollBy({ top: current.getBoundingClientRect().top - top, behavior: 'instant' })
       })
     },
