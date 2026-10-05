@@ -1,0 +1,55 @@
+export const copy = {
+  zh: {
+    nav: { home: '主页', projects: '项目', works: '设计', photos: '摄影', education: '教育', awards: '获奖', contact: '联系' },
+    skip: '跳到主要内容', homeLabel: 'Dinnrm · 返回主页', navigation: '主导航', switchLanguage: 'Switch to English', lightMode: '切换浅色模式', darkMode: '切换深色模式', openMenu: '打开导航菜单', closeMenu: '关闭导航菜单',
+    discipline: '视觉传达设计', hello: '你好，我是', designer: '视觉设计师', portraitAlt: '丁若木的黑白肖像照', viewWorks: '查看我的作品', contactMe: '联系我', focus: '主视觉系统 / 书籍装帧 / 公共空间', explore: '向下探索',
+    projectsTitle: '落地项目', projectsNote: '社会服务、文化活动与展演中的设计实践。',
+    worksTitle: '设计作品', categoriesNote: '按创作方向整理的作品分类。', filterLabel: '按类别筛选设计作品', all: '全部', showing: '显示 {count} 个作品分类', designCategory: '设计作品分类',
+    photosTitle: '摄影作品', photoDescription: '街头 · 人文 · 城市影像', photoCategory: '摄影作品分类',
+    educationTitle: '教育经历', school: '山东艺术学院', bachelor: '本科', master: '硕士在读', bachelorMajor: '视觉传达设计专业', masterMajor: '视觉传达设计（传统文化传承与创新方向）', tools: '常用软件',
+    awardsTitle: '竞赛获奖', awardsDescription: '累计国家级 4 项、省级十余项设计竞赛奖项。',
+    contactTitle: '期待合作', emailPending: '联系邮箱待更新', backTop: '返回顶部', source: '网站源码',
+  },
+  en: {
+    nav: { home: 'Home', projects: 'Projects', works: 'Design', photos: 'Photos', education: 'Education', awards: 'Awards', contact: 'Contact' },
+    skip: 'Skip to main content', homeLabel: 'Dinnrm · Back to home', navigation: 'Main navigation', switchLanguage: '切换到中文', lightMode: 'Switch to light mode', darkMode: 'Switch to dark mode', openMenu: 'Open navigation menu', closeMenu: 'Close navigation menu',
+    discipline: 'Visual communication', hello: 'Hello, I’m', designer: 'Visual designer', portraitAlt: 'Black-and-white portrait of Ding Ruomu', viewWorks: 'Explore my work', contactMe: 'Get in touch', focus: 'Key visual systems / Book design / Public spaces', explore: 'Scroll to explore',
+    projectsTitle: 'Realized projects', projectsNote: 'Design for communities, cultural events and performances.',
+    worksTitle: 'Design works', categoriesNote: 'Work categories, organized by design discipline.', filterLabel: 'Filter design categories', all: 'All', showing: 'Showing {count} work categories', designCategory: 'Design category',
+    photosTitle: 'Photography', photoDescription: 'Street · People · Urban life', photoCategory: 'Photography category',
+    educationTitle: 'Education', school: 'Shandong University of Arts', bachelor: 'Bachelor’s', master: 'Master’s · In progress', bachelorMajor: 'Visual Communication Design', masterMajor: 'Visual Communication Design (Traditional Culture: Heritage and Innovation)', tools: 'Design toolkit',
+    awardsTitle: 'Awards', awardsDescription: '4 national and over ten provincial design awards.',
+    contactTitle: 'Get in touch', emailPending: 'Contact email to be updated', backTop: 'Back to top', source: 'Site source',
+  },
+}
+
+// English equivalents; the original Chinese records remain in content.js.
+export const englishContent = {
+  intro: 'My research and practice focus on key visual systems for exhibitions and performances, book design, and public space design, supported by extensive experience in realized projects. I explore contemporary interpretations of traditional cultural elements, balancing visual aesthetics, information structure and practical implementation, and continue to explore how graphic design expresses itself in different contexts.',
+  education: 'Shandong University of Arts · Visual Communication Design (Traditional Culture: Heritage and Innovation)',
+  projects: [
+    { tag: 'Community', title: '“Yixin Weimin” visual identity', short: 'Community & culture', desc: 'A visual identity for the Jinan Cultural Center, including its logo, wayfinding and event materials. Implemented.' },
+    { tag: 'Competition', title: 'Kunlun Yao · Digital Cultural Tourism Competition', short: 'Competition identity', desc: 'Visual identity for the Shandong regional competition of the 19th National 3D Competition. Implemented.' },
+    { tag: 'Campus', title: 'Summer infrastructure visual design', short: 'Campus & public spaces', desc: 'Design services for summer infrastructure projects at Shandong University of Arts. Implemented.' },
+    { tag: 'Performance', title: 'Musical “The Flowers Are Always So Red”', short: 'Performance & publication', desc: 'Key visual and supporting materials for the performance, together with the related book design.' },
+  ],
+  categoryDescriptions: ['Event posters · Key visuals · Typographic experiments', 'Key visual systems for exhibitions and performances', 'Logos · Visual guidelines · Applications', 'Covers · Page layouts · Book formats'],
+  photos: ['Portrait photography', 'Landscape photography'],
+  awards: [
+    'Public-interest confidentiality campaign: script and poster competition · Second Prize',
+    'Cross-Strait Emerging Designers Competition · Huacan Award, Overall Competition · Second Prize (70th anniversary logo for Tuanjie Bao)',
+    'Chinese Collegiate Computing Competition, National Final · Second Prize',
+    'China Star Design Award, National Competition · Silver Award',
+    'Public-interest confidentiality film competition, Shandong · First Prize',
+    'Chinese Collegiate Computing Competition, Shandong · First Prize',
+    '15th Shandong University Students’ Science and Technology Festival, New Media Art Competition · First Prize',
+    '14th Shandong University Students’ Science and Technology Festival, New Media Art Competition · First Prize',
+    '“Jingcai Qilu” Television Music Video Art Competition · First Prize',
+    '16th Chinese Collegiate Computing Competition, Shandong · Second Prize',
+    'Shandong Cultural Tourism Creative Design Competition, “Liaocheng Gifts” Track · Second Prize',
+    'Future Designer NCDA, Shandong · Third Prize',
+    'Huacan Award, North China Region, Shandong · Third Prize',
+    'Eastern Creative Star Design Competition, Shandong · Bronze Award',
+    'National Advertising Art Design Competition for College Students, Shandong · Merit Award',
+  ],
+}

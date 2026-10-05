@@ -3,11 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dinnrm — 个人设计作品集</title>
+    <title>Dinnrm — 丁若木 · 个人设计作品集</title>
     <meta
       name="description"
       content="Dinnrm 的个人设计作品集，涵盖品牌设计、海报设计、书籍设计与摄影作品。"
     />
+    <meta name="theme-color" content="#f6f5f1" />
+    <script>
+      // Apply saved preferences before the first paint.
+      ;(() => {
+        let theme, lang
+        try {
+          theme = localStorage.getItem('dinnrm-theme')
+          lang = localStorage.getItem('dinnrm-lang')
+        } catch {}
+        document.documentElement.dataset.theme = theme === 'light' || theme === 'dark'
+          ? theme : matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+        document.documentElement.lang = lang === 'en' ? 'en' : 'zh-CN'
+      })()
+    </script>
   </head>
   <body>
     <div id="root"></div>
