@@ -2,11 +2,13 @@ import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { profile } from './data/content.js'
 import { copy } from './data/translations.js'
 import { usePreferences } from './hooks/usePreferences.js'
+import { useImageProtection } from './hooks/useImageProtection.js'
 import { CONTINUOUS_PAGES, NAV_PAGES, usePageNavigation } from './hooks/usePageNavigation.js'
 import PortfolioPage from './components/PortfolioPage.jsx'
 import Icon from './components/Icon.jsx'
 
 export default function App() {
+  useImageProtection()
   const { theme, setTheme, lang, setLang } = usePreferences()
   const { view, desktopMode, navigate: changePage } = usePageNavigation()
   const t = copy[lang]

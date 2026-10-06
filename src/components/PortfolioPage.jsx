@@ -1,12 +1,10 @@
-import { profile, awards, projects, designWorks, photos } from '../data/content.js'
+import { profile, awards, photos } from '../data/content.js'
 import { copy, englishContent } from '../data/translations.js'
 import Icon from './Icon.jsx'
+import DesignCollection from './DesignCollection.jsx'
 import portrait from '../assets/portrait-800.jpg'
 import portraitLarge from '../assets/portrait-1400.jpg'
 import schoolEmblem from '../assets/school/sdca-emblem.webp'
-
-const categoryKeys = ['poster', 'visual', 'brand', 'book']
-const categoryNames = ['Poster design', 'Key visual', 'Brand identity', 'Book design']
 
 function SectionHeading({ label, title, children }) {
   return <div className="section-heading"><div><p className="section-label">{label}</p><h2>{title}</h2></div>{children}</div>
@@ -16,7 +14,6 @@ export default function PortfolioPage({ view, lang, filter, setFilter, navigate 
   const en = lang === 'en'
   const t = copy[lang]
   const intro = en ? englishContent.intro : profile.intro
-  const visibleProjects = projects.map((project, index) => ({ ...project, index })).filter(project => filter === 'all' || project.categories.includes(filter))
 
   switch (view) {
     case 'home':
@@ -34,31 +31,13 @@ export default function PortfolioPage({ view, lang, filter, setFilter, navigate 
             </div>
           </div>
           <figure className="portrait-panel">
-            <div className="portrait-surface"><img src={portrait} srcSet={`${portrait} 600w, ${portraitLarge} 1050w`} sizes="(max-width: 767px) 350px, 410px" alt={t.portraitAlt} width="2160" height="2880" fetchpriority="high" decoding="async" /></div>
+            <div className="portrait-surface"><img src={portrait} srcSet={`${portrait} 600w, ${portraitLarge} 1050w`} sizes="(max-width: 767px) 350px, 410px" alt={t.portraitAlt} width="2160" height="2880" fetchpriority="high" draggable="false" decoding="async" /></div>
             <figcaption><span>{profile.name} <span className="caption-slash">/</span> {profile.pinyin}</span><span>{en ? 'Qingdao · Jinan' : profile.location}</span></figcaption>
           </figure>
         </section>
       )
     case 'works':
-      return (
-        <section id="works" className="content-section section-shell" aria-labelledby="works-title">
-          <SectionHeading label="Design practice" title={<span id="works-title">{t.worksTitle}</span>}><p className="section-note">{t.projectsNote}</p></SectionHeading>
-          <div className="work-filters" role="group" aria-label={t.filterLabel}>
-            <button className={filter === 'all' ? 'is-selected' : ''} aria-pressed={filter === 'all'} onClick={() => setFilter('all')}>{t.all}</button>
-            {designWorks.map((work, index) => <button key={work.title} className={filter === categoryKeys[index] ? 'is-selected' : ''} aria-pressed={filter === categoryKeys[index]} onClick={() => setFilter(categoryKeys[index])}>{en ? categoryNames[index] : work.title}</button>)}
-          </div>
-          <p className="sr-only" role="status">{t.showing.replace('{count}', visibleProjects.length)}</p>
-          <div className="project-grid">
-            {visibleProjects.map((project, order) => <article className="project-card motion-item" style={{ '--order': order }} key={project.title}>
-              <div className="project-top"><span className="project-number">0{project.index + 1}</span><span className="project-tag">{en ? englishContent.projects[project.index].tag : project.tag}</span></div>
-              <h3>{en ? englishContent.projects[project.index].title : project.title}</h3>
-              <p>{en ? englishContent.projects[project.index].desc : project.desc}</p>
-              <div className="project-bottom"><span>{en ? project.title : englishContent.projects[project.index].short}</span><span className="project-rule" /></div>
-            </article>)}
-          </div>
-          {visibleProjects.length === 0 && <p className="empty-category">{t.emptyCategory}</p>}
-        </section>
-      )
+      return <DesignCollection lang={lang} filter={filter} setFilter={setFilter} />
     case 'photos':
       return (
         <section id="photos" className="content-section photography-section" aria-labelledby="photos-title">
@@ -75,7 +54,7 @@ export default function PortfolioPage({ view, lang, filter, setFilter, navigate 
             <div className="education-degrees">
               {[{ degree: t.bachelor, major: t.bachelorMajor }, { degree: t.master, major: t.masterMajor }].map((item, index) => (
                 <article className="degree-card motion-item" style={{ '--order': index + 1 }} key={index}>
-                  <span className="school-emblem"><img src={schoolEmblem} alt={t.emblemAlt} width="234" height="240" decoding="async" loading="lazy" /></span>
+                  <span className="school-emblem"><img src={schoolEmblem} alt={t.emblemAlt} width="234" height="240" draggable="false" decoding="async" loading="lazy" /></span>
                   <div className="degree-details"><p className="degree-label">{item.degree}</p><h3>{t.school}</h3><p className="degree-major">{item.major}</p></div>
                 </article>
               ))}

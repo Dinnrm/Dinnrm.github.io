@@ -330,3 +330,36 @@ h2 { font-family: var(--sans); font-size: clamp(28px, 3.2vw, 44px); font-weight:
   .is-single .project-card:hover,
   .button:active, .icon-button:active, .work-filters button:active { transform: none; }
 }
+
+/* Shared protection applies to current and future image elements.
+   This limits casual saving, not screenshots or extraction of public assets. */
+img { -webkit-user-drag: none; -webkit-touch-callout: none; user-select: none; }
+[data-protected-image] { -webkit-touch-callout: none; user-select: none; }
+
+/* Full-frame artwork previews and factual project records. */
+.series-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-bottom: 28px; }
+.series-card { min-width: 0; }
+.series-display { display: block; width: 100%; }
+.series-preview { display: flex; justify-content: center; align-items: center; gap: clamp(8px, 1.2vw, 16px); padding: 22px; height: clamp(155px, 19vw, 230px); border-radius: 14px; border: 1px solid var(--line); background: var(--surface); }
+.series-preview img { min-width: 0; width: auto; max-width: calc(25% - 9px); height: 100%; object-fit: contain; filter: drop-shadow(0 3px 5px #00000012); }
+.series-caption { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-top: 16px; }
+.series-caption .project-tag { border: 0; padding: 0; display: block; font-size: 11px; margin-bottom: 4px; }
+.series-title { font-size: 19px; font-weight: 600; line-height: 1.5; }
+.series-count { font-size: 11px; color: var(--muted); white-space: nowrap; }
+.series-description { color: var(--muted); font-size: 12px; line-height: 1.9; margin-top: 10px; }
+.project-index { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 40px; }
+.project-entry { display: grid; grid-template-columns: 26px minmax(0, 1fr); gap: 16px; padding: 19px 0; border-top: 1px solid var(--line); }
+.project-entry-number { color: var(--muted); font-size: 12px; padding-top: 3px; }
+.project-entry-category { color: var(--accent); font-size: 10px; margin-bottom: 5px; }
+.project-entry h3 { font-size: 15px; line-height: 1.65; font-weight: 550; overflow-wrap: anywhere; }
+.project-entry-description { color: var(--muted); font-size: 12px; margin-top: 6px; }
+@media (max-width: 767px) {
+  .series-grid, .project-index { grid-template-columns: 1fr; }
+  .series-grid { gap: 30px; }
+  .series-preview { height: clamp(155px, 51vw, 260px); padding: 18px 12px; gap: 8px; }
+  .series-preview img { max-width: calc(25% - 6px); }
+  .series-caption { gap: 12px; }
+  .series-title { font-size: 18px; }
+  .series-count { font-size: 10px; }
+  .project-entry { gap: 12px; padding-block: 20px; }
+}

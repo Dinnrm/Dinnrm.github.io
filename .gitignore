@@ -11,3 +11,8 @@ dist
 Thumbs.db
 *.swp
 *.swo
+
+# 原始高清素材只保留在本地；网站使用压缩展示副本。
+src/assets/portrait.png
+src/assets/school/originals/
+src/assets/projects/originals/
