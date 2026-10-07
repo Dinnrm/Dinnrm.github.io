@@ -1,18 +1,21 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
-import { profile } from './data/content.js'
+import { profile, projects } from './data/content.js'
 import { copy } from './data/translations.js'
 import { usePreferences } from './hooks/usePreferences.js'
 import { useImageProtection } from './hooks/useImageProtection.js'
 import { CONTINUOUS_PAGES, NAV_PAGES, usePageNavigation } from './hooks/usePageNavigation.js'
 import PortfolioPage from './components/PortfolioPage.jsx'
 import Icon from './components/Icon.jsx'
+import ProjectDetail from './components/ProjectDetail.jsx'
 
 export default function App() {
   useImageProtection()
   const { theme, setTheme, lang, setLang } = usePreferences()
-  const { view, desktopMode, navigate: changePage } = usePageNavigation()
+  const { view, desktopMode, projectId, navigate: changePage } = usePageNavigation()
   const t = copy[lang]
   const en = lang === 'en'
+  const project = projects.find(item => item.id === projectId)
+  const projectTitle = project ? (en ? project.titleEn : project.title) : null
   const [menuOpen, setMenuOpen] = useState(false)
   const [filter, setFilter] = useState('all')
   const menuButton = useRef(null)
@@ -20,8 +23,8 @@ export default function App() {
   const indicator = useRef(null)
 
   useEffect(() => {
-    document.title = `${t.nav[view]} · Dinnrm — ${en ? 'Ding Ruomu' : profile.name}`
-  }, [view, lang, t])
+    document.title = `${projectTitle || t.nav[view]} · Dinnrm — ${en ? 'Ding Ruomu' : profile.name}`
+  }, [view, lang, t, projectTitle])
 
   useLayoutEffect(() => {
     const navigation = nav.current
@@ -106,10 +109,10 @@ export default function App() {
       </header>
       {menuOpen && <button className="menu-backdrop" onClick={() => setMenuOpen(false)} aria-label={t.closeMenu} tabIndex={-1} />}
 
-      <main id="main" className={'page-stage' + (desktopMode ? ' is-single' : ' is-continuous')} tabIndex={-1}>
-        <p className="sr-only" role="status">{t.nav[view]}</p>
-        <div className="page-content" key={desktopMode ? view : 'continuous'} data-page={desktopMode ? view : 'continuous'}>
-          {(desktopMode ? [view] : CONTINUOUS_PAGES).map(page => (
+      <main id="main" className={'page-stage' + (desktopMode || project ? ' is-single' : ' is-continuous')} tabIndex={-1}>
+        <p className="sr-only" role="status">{projectTitle || t.nav[view]}</p>
+        <div className="page-content" key={project ? project.id : desktopMode ? view : 'continuous'} data-page={project ? `works/${project.id}` : desktopMode ? view : 'continuous'}>
+          {project ? <ProjectDetail project={project} lang={lang} navigate={navigate} /> : (desktopMode ? [view] : CONTINUOUS_PAGES).map(page => (
             <PortfolioPage key={page} view={page} lang={lang} filter={filter} setFilter={setFilter} navigate={navigate} />
           ))}
         </div>

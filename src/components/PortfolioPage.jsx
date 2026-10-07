@@ -37,7 +37,7 @@ export default function PortfolioPage({ view, lang, filter, setFilter, navigate 
         </section>
       )
     case 'works':
-      return <DesignCollection lang={lang} filter={filter} setFilter={setFilter} />
+      return <DesignCollection lang={lang} filter={filter} setFilter={setFilter} navigate={navigate} />
     case 'photos':
       return (
         <section id="photos" className="content-section photography-section" aria-labelledby="photos-title">

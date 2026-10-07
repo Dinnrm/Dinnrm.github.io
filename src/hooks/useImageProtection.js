@@ -5,7 +5,10 @@ import { useEffect } from 'react'
 export function useImageProtection() {
   useEffect(() => {
     const protect = event => {
-      if (event.target instanceof Element && event.target.closest('img, picture, [data-protected-image]')) {
+      if (!(event.target instanceof Element)) return
+      // A collection cover opens its project page, never an individual image.
+      if (event.type === 'click' && event.target.closest('a[data-project-link][href^="#/works/"]')) return
+      if (event.target.closest('img, picture, [data-protected-image]')) {
         event.preventDefault()
         event.stopPropagation()
       }

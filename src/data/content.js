@@ -46,32 +46,32 @@ export const projects = [
     categories: ['poster'], images: ['shen-photo', 'shen-file', 'shen-speech'],
   },
   {
-    id: 'flowers-visual', tag: '演出视觉', tagEn: 'Performance',
+    id: 'flowers-visual', coverTitle: '花儿永远这样红', coverTitleEn: 'The Flowers Are Always So Red', listingTitle: '《花儿永远这样红》主视觉设计', listingTitleEn: 'The Flowers Are Always So Red · Key visual', tag: '演出视觉', tagEn: 'Performance',
     title: '音乐剧《花儿永远这样红》（济南内部演出版）主视觉设计', titleEn: 'Musical “The Flowers Are Always So Red” · Jinan internal production',
     desc: '演出主视觉及配套物料设计。', descEn: 'Key visual and supporting materials for the performance.', categories: ['visual'],
   },
   {
-    id: 'kunlun', tag: '赛事视觉', tagEn: 'Competition',
+    id: 'kunlun', coverTitle: '昆仑谣', coverTitleEn: 'Kunlun Yao', listingTitle: '昆仑谣 · 数字文旅与 AIGC 大赛', listingTitleEn: 'Kunlun Yao · Digital tourism & AIGC', tag: '赛事视觉', tagEn: 'Competition',
     title: '第19届全国3D大赛“昆仑谣·数字文旅创作大赛”暨2026AIGC多模态创新设计与技术应用大赛（山东赛区）视觉系统设计',
     titleEn: '19th National 3D Competition · Kunlun Yao Digital Cultural Tourism Creation Competition & 2026 AIGC Multimodal Innovation Design and Technology Application Competition (Shandong)',
     desc: '山东赛区视觉系统设计。', descEn: 'Visual identity for the Shandong regional competition.', categories: ['visual'],
   },
   {
-    id: 'yixin', tag: '社会服务', tagEn: 'Community',
+    id: 'yixin', coverTitle: '艺心为民', coverTitleEn: 'Yixin Weimin', listingTitle: '济南市文化馆「艺心为民」视觉系统', listingTitleEn: 'Jinan Cultural Center · Yixin Weimin', tag: '社会服务', tagEn: 'Community',
     title: '济南市文化馆“家门口的文化馆——‘艺’心为民”视觉系统设计', titleEn: 'Jinan Cultural Center · “A Cultural Center at Your Doorstep — Yixin Weimin”',
     desc: '济南市文化馆视觉系统设计，涵盖标志、导视与活动物料。', descEn: 'A visual identity for the Jinan Cultural Center, including its logo, wayfinding and event materials.', categories: ['brand', 'visual'],
   },
   {
-    id: 'zhunongfeng', tag: '品牌设计', tagEn: 'Brand identity', title: '祝农丰、科小七品牌设计', titleEn: 'Zhunongfeng & Ke Xiaoqi · Brand identity', categories: ['brand'],
+    id: 'zhunongfeng', coverTitle: '祝农丰 · 科小七', coverTitleEn: 'Zhunongfeng · Ke Xiaoqi', tag: '品牌设计', tagEn: 'Brand identity', title: '祝农丰、科小七品牌设计', titleEn: 'Zhunongfeng & Ke Xiaoqi · Brand identity', categories: ['brand'],
   },
   {
-    id: 'huafeng', tag: '品牌设计', tagEn: 'Brand identity', title: '华丰共道品牌设计', titleEn: 'Huafeng Gongdao · Brand identity', categories: ['brand'],
+    id: 'huafeng', coverTitle: '华丰共道', coverTitleEn: 'Huafeng Gongdao', tag: '品牌设计', tagEn: 'Brand identity', title: '华丰共道品牌设计', titleEn: 'Huafeng Gongdao · Brand identity', categories: ['brand'],
   },
   {
-    id: 'flowers-book', tag: '书籍装帧', tagEn: 'Book design', title: '《花儿永远这样红》书籍装帧设计', titleEn: '“The Flowers Are Always So Red” · Book design', categories: ['book'],
+    id: 'flowers-book', coverTitle: '花儿永远这样红', coverTitleEn: 'The Flowers Are Always So Red', tag: '书籍装帧', tagEn: 'Book design', title: '《花儿永远这样红》书籍装帧设计', titleEn: '“The Flowers Are Always So Red” · Book design', categories: ['book'],
   },
   {
-    id: 'campus', tag: '校园服务', tagEn: 'Campus', title: '山东艺术学院基建设计', titleEn: 'Shandong University of Arts · Infrastructure design',
+    id: 'campus', coverTitle: '山东艺术学院', coverTitleEn: 'Shandong University of Arts', tag: '校园服务', tagEn: 'Campus', title: '山东艺术学院基建设计', titleEn: 'Shandong University of Arts · Infrastructure design',
     desc: '山东艺术学院暑期基建项目设计服务。', descEn: 'Design services for summer infrastructure projects at Shandong University of Arts.', categories: ['other'],
   },
 ]

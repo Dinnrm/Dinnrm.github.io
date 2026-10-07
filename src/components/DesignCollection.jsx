@@ -1,13 +1,12 @@
 import { projects, designWorks } from '../data/content.js'
 import { projectImages } from '../data/projectImages.js'
 import { copy } from '../data/translations.js'
+import Icon from './Icon.jsx'
 
-export default function DesignCollection({ lang, filter, setFilter }) {
+export default function DesignCollection({ lang, filter, setFilter, navigate }) {
   const en = lang === 'en'
   const t = copy[lang]
   const visible = projects.filter(project => filter === 'all' || project.categories.includes(filter))
-  const series = visible.filter(project => project.images?.length)
-  const textProjects = visible.filter(project => !project.images?.length)
 
   return (
     <section id="works" className="content-section section-shell" aria-labelledby="works-title">
@@ -17,26 +16,22 @@ export default function DesignCollection({ lang, filter, setFilter }) {
         {designWorks.map(work => <button key={work.id} className={filter === work.id ? 'is-selected' : ''} aria-pressed={filter === work.id} onClick={() => setFilter(work.id)}>{en ? work.titleEn : work.title}</button>)}
       </div>
       <p className="sr-only" role="status">{t.showing.replace('{count}', visible.length)}</p>
-      {series.length > 0 && <div className="series-grid">
-        {series.map((project, order) => <article className="series-card motion-item" key={project.id} style={{ '--order': order }}>
-          <div className="series-display">
-            <div className="series-preview" data-protected-image>
-              {project.images.map(key => {
-                const img = projectImages[key]
-                return <img key={key} src={img.thumb} srcSet={`${img.thumb} 320w, ${img.medium} 960w`} sizes="(max-width: 767px) 24vw, 150px" width={img.width} height={img.height} loading="lazy" decoding="async" draggable="false" alt={`${en ? project.titleEn : project.title} · ${en ? img.captionEn : img.caption}`} />
-              })}
-            </div>
-            <div className="series-caption"><div><p className="project-tag">{en ? project.tagEn : project.tag}</p><h3 className="series-title">{en ? project.titleEn : project.title}</h3></div><span className="series-count">{t.imageCount.replace('{count}', project.images.length)}</span></div>
-          </div>
-          <p className="series-description">{en ? project.descEn : project.desc}</p>
-        </article>)}
-      </div>}
-      {textProjects.length > 0 && <div className="project-index">
-        {textProjects.map((project, order) => <article className="project-entry motion-item" key={project.id} style={{ '--order': order + series.length }}>
-          <span className="project-entry-number" aria-hidden="true">{String(projects.indexOf(project) + 1).padStart(2, '0')}</span>
-          <div><p className="project-entry-category">{en ? project.tagEn : project.tag}</p><h3>{en ? project.titleEn : project.title}</h3>{project.desc && <p className="project-entry-description">{en ? project.descEn : project.desc}</p>}</div>
-        </article>)}
-      </div>}
+      <div className="work-card-grid">
+        {visible.map((project, order) => {
+          const image = project.images?.length ? projectImages[project.images[0]] : null
+          const title = en ? project.titleEn : project.title
+          return <article className="work-preview-card motion-item" key={project.id} style={{ '--order': order }}>
+            <a className="work-preview-link" id={`project-link-${project.id}`} data-project-link href={`#/works/${project.id}`} onClick={event => navigate(`works/${project.id}`, event)} aria-label={`${t.viewProject} · ${title}`}>
+              <div className={`work-cover ${image ? 'has-artwork' : 'has-typography'}`} data-protected-image>
+                {image ? <img src={image.thumb} srcSet={`${image.thumb} 320w, ${image.medium} 960w`} sizes="(max-width: 767px) 45vw, 180px" width={image.width} height={image.height} loading="lazy" decoding="async" draggable="false" alt="" /> : <div className="work-type-cover" aria-hidden="true"><span className="cover-discipline">{en ? project.tagEn : project.tag}</span><span className="cover-name">{en ? project.coverTitleEn : project.coverTitle}</span><span className="cover-rule" /></div>}
+                <span className="work-cover-marker" aria-hidden="true">{String(projects.indexOf(project) + 1).padStart(2, '0')}</span>
+                {image && <span className="work-cover-count">{t.imageCount.replace('{count}', project.images.length)}</span>}
+              </div>
+              <div className="work-card-caption"><div><p className="work-card-category">{en ? project.tagEn : project.tag}</p><h3>{en ? project.listingTitleEn || title : project.listingTitle || title}</h3></div><span className="work-card-arrow" aria-hidden="true"><Icon /></span></div>
+            </a>
+          </article>
+        })}
+      </div>
       {!visible.length && <p className="empty-category">{t.emptyCategory}</p>}
     </section>
   )
