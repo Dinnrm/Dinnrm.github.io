@@ -17,6 +17,10 @@ export function pageFromHash(hash) {
   return ALL_PAGES.includes(page) ? page : 'home'
 }
 
+export function shouldRestoreCollection(from, to, intent) {
+  return from.startsWith('works/') && to === 'works' && (intent === 'return' || intent === 'history')
+}
+
 export function usePageNavigation() {
   const [route, setRoute] = useState(() => pageFromHash(window.location.hash))
   const [desktopMode, setDesktopMode] = useState(() => shouldUseIndividualPages(window.matchMedia(DESKTOP_QUERY).matches, navigator.maxTouchPoints))
@@ -27,6 +31,7 @@ export function usePageNavigation() {
   const activeRef = useRef(active)
   const previousRoute = useRef(route)
   const collectionReturn = useRef(null)
+  const navigationIntent = useRef('initial')
   activeRef.current = active
 
   useLayoutEffect(() => {
@@ -48,7 +53,10 @@ export function usePageNavigation() {
 
   useEffect(() => {
     const sync = () => {
-      if (window.location.hash !== '#main') setRoute(pageFromHash(window.location.hash))
+      if (window.location.hash !== '#main') {
+        navigationIntent.current = 'history'
+        setRoute(pageFromHash(window.location.hash))
+      }
     }
     window.addEventListener('hashchange', sync)
     window.addEventListener('popstate', sync)
@@ -59,34 +67,41 @@ export function usePageNavigation() {
   }, [])
 
   useLayoutEffect(() => {
-    const returning = previousRoute.current.startsWith('works/') && route === 'works'
+    const returning = shouldRestoreCollection(previousRoute.current, route, navigationIntent.current)
     previousRoute.current = route
     if (window.location.hash && window.location.hash !== '#main') {
       const canonical = `#/${route}`
       if (window.location.hash !== canonical) window.history.replaceState(null, '', canonical)
     }
-    const frame = requestAnimationFrame(() => {
+    let settleFrame = 0
+    const position = () => {
+      const offset = (document.querySelector('.site-header')?.getBoundingClientRect().height || 0) + 14
       if (returning && collectionReturn.current) {
         const saved = collectionReturn.current
         const card = document.getElementById(`project-link-${saved.id}`)
-        const offset = (document.querySelector('.site-header')?.getBoundingClientRect().height || 0) + 14
         const top = saved.width === window.innerWidth || !card ? saved.y : window.scrollY + card.getBoundingClientRect().top - offset
-        window.scrollTo({ top, left: 0, behavior: 'instant' })
-        card?.focus({ preventScroll: true })
+        window.scrollTo(0, Math.max(0, top))
         return
       }
       if (projectId || desktopMode || route === 'home') {
-        window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
-        if (projectId) document.getElementById('project-title')?.focus({ preventScroll: true })
+        window.scrollTo(0, 0)
         return
       }
       const target = document.getElementById(route)
       if (!target) return
       const heading = target.querySelector('h1, h2') || target
-      const offset = (document.querySelector('.site-header')?.getBoundingClientRect().height || 0) + 14
-      window.scrollTo({ top: Math.max(0, window.scrollY + heading.getBoundingClientRect().top - offset), left: 0, behavior: 'instant' })
+      window.scrollTo(0, Math.max(0, window.scrollY + heading.getBoundingClientRect().top - offset))
+    }
+    const frame = requestAnimationFrame(() => {
+      position()
+      if (returning && collectionReturn.current) document.getElementById(`project-link-${collectionReturn.current.id}`)?.focus({ preventScroll: true })
+      else if (projectId) document.getElementById('project-title')?.focus({ preventScroll: true })
+      // Re-measure once after menu dismissal and any focus adjustment. No
+      // timers or ongoing scroll loop compete with the user's next gesture.
+      settleFrame = requestAnimationFrame(position)
     })
-    return () => cancelAnimationFrame(frame)
+    return () => { cancelAnimationFrame(frame); cancelAnimationFrame(settleFrame) }
+
   }, [route, projectId, desktopMode, navigationVersion])
 
   useEffect(() => {
@@ -115,11 +130,12 @@ export function usePageNavigation() {
     }
   }, [desktopMode, projectId])
 
-  function navigate(page, event) {
+  function navigate(page, event, options = {}) {
     const target = pageFromHash(`#/${page}`)
     if (target !== page) return
     if (event && (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button > 0)) return
     event?.preventDefault()
+    navigationIntent.current = options.restoreCollection ? 'return' : 'section'
     if (page.startsWith('works/') && !projectId) {
       collectionReturn.current = { y: window.scrollY, width: window.innerWidth, id: page.slice(6) }
       // A card may be opened after scrolling the mobile collection without

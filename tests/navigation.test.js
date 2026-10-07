@@ -1,6 +1,6 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import { pageFromHash, shouldUseIndividualPages, NAV_PAGES, CONTINUOUS_PAGES } from '../src/hooks/usePageNavigation.js'
+import { pageFromHash, shouldUseIndividualPages, shouldRestoreCollection, NAV_PAGES, CONTINUOUS_PAGES } from '../src/hooks/usePageNavigation.js'
 import { projects } from '../src/data/content.js'
 
 test('every supplied project has an independent route that survives a direct hash', () => {
@@ -27,4 +27,13 @@ test('touch-capable devices keep continuous navigation even with a fine pointer'
   assert.equal(shouldUseIndividualPages(true, 0), true)
   assert.equal(shouldUseIndividualPages(false, 0), false)
   assert.deepEqual(CONTINUOUS_PAGES, ['home', 'education', 'awards', 'works', 'photos', 'contact'])
+})
+
+
+test('menu navigation reaches the section header instead of restoring a work card', () => {
+  assert.equal(shouldRestoreCollection('works/shoumo', 'works', 'section'), false)
+  assert.equal(shouldRestoreCollection('works/shoumo', 'works', 'return'), true)
+  assert.equal(shouldRestoreCollection('works/shoumo', 'works', 'history'), true)
+  assert.equal(shouldRestoreCollection('works/shoumo', 'education', 'history'), false)
+  assert.equal(shouldRestoreCollection('works', 'works', 'return'), false)
 })

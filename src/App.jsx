@@ -19,6 +19,7 @@ export default function App() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [filter, setFilter] = useState('all')
   const menuButton = useRef(null)
+  const menuKeyboard = useRef(false)
   const nav = useRef(null)
   const indicator = useRef(null)
 
@@ -55,12 +56,8 @@ export default function App() {
 
   useEffect(() => {
     if (!menuOpen) return
-    const top = window.scrollY
-    const left = window.scrollX
     const frame = requestAnimationFrame(() => {
-      nav.current.querySelector('a')?.focus({ preventScroll: true })
-      // Some embedded/mobile browsers still scroll sticky descendants on focus.
-      window.scrollTo({ top, left, behavior: 'instant' })
+      if (menuKeyboard.current) nav.current.querySelector('a')?.focus({ preventScroll: true })
     })
     const close = (event) => {
       if (event.key === 'Escape') {
@@ -79,18 +76,18 @@ export default function App() {
     }
   }, [menuOpen])
 
-  function navigate(page, event) {
+  function navigate(page, event, options) {
     if (event && (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button > 0)) return
-    if (menuOpen) menuButton.current?.focus({ preventScroll: true })
+    if (menuOpen && event?.detail === 0) menuButton.current?.focus({ preventScroll: true })
     setMenuOpen(false)
-    changePage(page, event)
+    changePage(page, event, options)
   }
 
   return (
     <>
       <a className="skip-link" href="#main">{t.skip}</a>
       <header className={'site-header' + (desktopMode ? ' single-header' : '')} onBlur={(event) => {
-        if (menuOpen && !event.currentTarget.contains(event.relatedTarget)) setMenuOpen(false)
+        if (menuOpen && event.relatedTarget && !event.currentTarget.contains(event.relatedTarget)) setMenuOpen(false)
       }}>
         <div className="header-inner">
           <a className="wordmark" href="#/home" onClick={(event) => navigate('home', event)} aria-label={t.homeLabel}>Dinnrm<span className="brand-dot">.</span></a>
@@ -103,7 +100,7 @@ export default function App() {
           <div className="header-controls">
             <button className="language-control" onClick={() => setLang(en ? 'zh' : 'en')} aria-label={t.switchLanguage}><span className={!en ? 'selected' : ''}>中</span><span className="control-divider">/</span><span className={en ? 'selected' : ''}>EN</span></button>
             <button className="icon-button theme-control" onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} aria-label={theme === 'dark' ? t.lightMode : t.darkMode} title={theme === 'dark' ? t.lightMode : t.darkMode}><span className="theme-symbol" key={theme}><Icon name={theme === 'dark' ? 'sun' : 'moon'} /></span></button>
-            <button ref={menuButton} className="icon-button menu-control" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-controls="main-navigation" aria-label={menuOpen ? t.closeMenu : t.openMenu}><Icon name={menuOpen ? 'close' : 'menu'} /></button>
+            <button ref={menuButton} className="icon-button menu-control" onClick={event => { menuKeyboard.current = event.detail === 0; setMenuOpen(!menuOpen) }} aria-expanded={menuOpen} aria-controls="main-navigation" aria-label={menuOpen ? t.closeMenu : t.openMenu}><Icon name={menuOpen ? 'close' : 'menu'} /></button>
           </div>
         </div>
       </header>
