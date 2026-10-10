@@ -11,7 +11,8 @@ export default function ProjectDetail({ project, lang, navigate }) {
     <section className="project-detail section-shell" aria-labelledby="project-title">
       <a className="project-back" href="#/works" onClick={event => navigate('works', event, { restoreCollection: true })}><Icon name="back" />{t.backWorks}</a>
       <header className="project-detail-heading"><p className="section-label">{en ? project.tagEn : project.tag}</p><h1 id="project-title" tabIndex={-1}>{title}</h1></header>
-      <div className="project-description"><p>{description || t.descriptionPending}</p></div>
+      <div className="project-description"><h2 className="project-section-title">{t.projectNotes}</h2><p>{description || t.descriptionPending}</p></div>
+      <div className="project-artwork-block"><h2 className="project-section-title">{t.projectGallery}</h2>
       {project.images?.length ? <div className="project-artwork-list">
         {project.images.map((key, index) => {
           const image = projectImages[key]
@@ -21,7 +22,7 @@ export default function ProjectDetail({ project, lang, navigate }) {
             <figcaption><span>{caption}</span><span>{String(index + 1).padStart(2, '0')} / {String(project.images.length).padStart(2, '0')}</span></figcaption>
           </figure>
         })}
-      </div> : <p className="project-images-pending">{t.imagesPending}</p>}
+      </div> : <p className="project-images-pending">{t.imagesPending}</p>}</div>
     </section>
   )
 }
