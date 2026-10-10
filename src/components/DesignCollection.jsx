@@ -10,7 +10,7 @@ export default function DesignCollection({ lang, filter, setFilter, navigate }) 
 
   return (
     <section id="works" className="content-section section-shell" aria-labelledby="works-title">
-      <div className="section-heading work-index-heading"><div><p className="section-label">Design practice</p><h2 id="works-title">{t.worksTitle}</h2></div><p className="section-note">{t.projectsNote}</p></div>
+      <div className="section-heading work-index-heading"><div><p className="section-label">Design practice</p><h2 id="works-title">{t.worksTitle}</h2></div></div>
       <div className="work-filters" role="group" aria-label={t.filterLabel}>
         <button className={filter === 'all' ? 'is-selected' : ''} aria-pressed={filter === 'all'} onClick={() => setFilter('all')}>{t.all}</button>
         {designWorks.map(work => <button key={work.id} className={filter === work.id ? 'is-selected' : ''} aria-pressed={filter === work.id} onClick={() => setFilter(work.id)}>{en ? work.titleEn : work.title}</button>)}

@@ -341,7 +341,6 @@ img { -webkit-user-drag: none; -webkit-touch-callout: none; user-select: none; }
 
 /* Reference-inspired editorial composition, using only supplied artwork. */
 .work-index-heading { align-items: start; margin-bottom: 44px; }
-.work-index-heading .section-note { max-width: 530px; font-size: clamp(22px, 2.4vw, 32px); color: var(--ink); line-height: 1.5; letter-spacing: -.035em; text-wrap: balance; }
 .work-card-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 44px 28px; }
 .work-preview-card { min-width: 0; }
 .work-preview-link { display: block; height: 100%; border-radius: 4px; }
@@ -395,7 +394,6 @@ img { -webkit-user-drag: none; -webkit-touch-callout: none; user-select: none; }
 }
 @media (max-width: 767px) {
   .work-index-heading { gap: 18px; margin-bottom: 30px; }
-  .work-index-heading .section-note { max-width: 28ch; font-size: 21px; line-height: 1.6; }
   .work-card-grid { grid-template-columns: 1fr; gap: 32px; }
   .work-cover { --cover-inset: 24px; }
   .work-cover-artworks { gap: 12px; }

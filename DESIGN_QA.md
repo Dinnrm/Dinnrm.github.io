@@ -161,3 +161,7 @@
 - 验证为桌面浏览器的响应式尺寸检查，未在物理 iOS 设备上测量性能或验证长按；公开展示图片仍无法绝对防止截图或提取。
 
 最新截图：`portfolio-reference-works.png`、`portfolio-reference-detail.png`、`portfolio-reference-mobile.png`、`portfolio-reference-detail-mobile.png`，替代前述版式截图。
+
+### 2026-10-10 页头精简
+
+按用户反馈删除作品页标题右侧“海报、视觉系统、品牌与书籍中的设计实践。”及英文对应展示，并移除该段专用字号样式。桌面及 390px 手机检查通过：九个作品保留，无横向溢出，手机设计标题仍定位在 87.23px。生产构建与 diff 检查通过。最新截图：`portfolio-works-simple-heading.png`。
