@@ -13,7 +13,29 @@ import shen_file_960 from '../assets/projects/shen-file-960.webp'
 import shen_speech_320 from '../assets/projects/shen-speech-320.webp'
 import shen_speech_960 from '../assets/projects/shen-speech-960.webp'
 
+import yixin_1_320 from '../assets/projects/yixin-1-320.webp'
+import yixin_1_960 from '../assets/projects/yixin-1-960.webp'
+import yixin_2_320 from '../assets/projects/yixin-2-320.webp'
+import yixin_2_960 from '../assets/projects/yixin-2-960.webp'
+import yixin_3_320 from '../assets/projects/yixin-3-320.webp'
+import yixin_3_960 from '../assets/projects/yixin-3-960.webp'
+import yixin_4_320 from '../assets/projects/yixin-4-320.webp'
+import yixin_4_960 from '../assets/projects/yixin-4-960.webp'
+import yixin_5_320 from '../assets/projects/yixin-5-320.webp'
+import yixin_5_960 from '../assets/projects/yixin-5-960.webp'
+import flowers_book_1_320 from '../assets/projects/flowers-book-1-320.webp'
+import flowers_book_1_960 from '../assets/projects/flowers-book-1-960.webp'
+import flowers_book_2_320 from '../assets/projects/flowers-book-2-320.webp'
+import flowers_book_2_960 from '../assets/projects/flowers-book-2-960.webp'
+
 export const projectImages = {
+  'yixin-1': { caption: '项目源起', captionEn: 'Project background', width: 3368, height: 4763, thumb: yixin_1_320, medium: yixin_1_960 },
+  'yixin-2': { caption: '基础视觉系统与衍生品', captionEn: 'Core identity and merchandise', width: 3369, height: 4763, thumb: yixin_2_320, medium: yixin_2_960 },
+  'yixin-3': { caption: '应用系统与导视标识', captionEn: 'Applications and wayfinding', width: 3368, height: 4763, thumb: yixin_3_320, medium: yixin_3_960 },
+  'yixin-4': { caption: '标志与衍生品实景应用', captionEn: 'Identity and merchandise in use', width: 3369, height: 4763, thumb: yixin_4_320, medium: yixin_4_960 },
+  'yixin-5': { caption: '衍生品应用与社会反馈', captionEn: 'Merchandise and social response', width: 3368, height: 4763, thumb: yixin_5_320, medium: yixin_5_960 },
+  'flowers-book-1': { caption: '设计理念与封面装帧', captionEn: 'Design concept and cover construction', width: 3508, height: 4961, thumb: flowers_book_1_320, medium: flowers_book_1_960 },
+  'flowers-book-2': { caption: '内页排版与书籍效果', captionEn: 'Page layouts and book presentation', width: 3508, height: 4961, thumb: flowers_book_2_320, medium: flowers_book_2_960 },
   'shoumo-brush': { caption: '湖笔', captionEn: 'Huzhou brush', width: 3368, height: 4763, thumb: shoumo_brush_320, medium: shoumo_brush_960 },
   'shoumo-ink': { caption: '徽墨', captionEn: 'Huizhou ink', width: 3368, height: 4763, thumb: shoumo_ink_320, medium: shoumo_ink_960 },
   'shoumo-paper': { caption: '宣纸', captionEn: 'Xuan paper', width: 3368, height: 4763, thumb: shoumo_paper_320, medium: shoumo_paper_960 },

@@ -11,7 +11,7 @@ export default function ProjectDetail({ project, lang, navigate }) {
     <section className="project-detail section-shell" aria-labelledby="project-title">
       <a className="project-back" href="#/works" onClick={event => navigate('works', event, { restoreCollection: true })}><Icon name="back" />{t.backWorks}</a>
       <header className="project-detail-heading"><p className="section-label">{en ? project.tagEn : project.tag}</p><h1 id="project-title" tabIndex={-1}>{title}</h1></header>
-      <div className="project-description"><h2 className="project-section-title">{t.projectNotes}</h2><p>{description || t.descriptionPending}</p></div>
+      <div className="project-description"><h2 className="project-section-title">{t.projectNotes}</h2><div className="project-description-body">{(description || t.descriptionPending).split(/\n\s*\n/).map((paragraph, index) => <p key={index}>{paragraph}</p>)}</div></div>
       <div className="project-artwork-block"><h2 className="project-section-title">{t.projectGallery}</h2>
       {project.images?.length ? <div className="project-artwork-list">
         {project.images.map((key, index) => {
