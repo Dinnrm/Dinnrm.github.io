@@ -176,3 +176,7 @@
 - 验证为桌面浏览器的响应式尺寸检查，未在物理 iOS 设备上验证。公开展示副本仍无法绝对防止截图或提取。
 
 截图：`portfolio-yixin-details.png`、`portfolio-flowers-book-details.png`。
+
+### 2026-10-11 说明精简
+
+艺心为民、书籍设计的中文说明各精简为一段（116／130 字符），英文同步精简。浏览器确认两项各只有一个说明段落，图片仍为五张／两张，无横向溢出；生产构建与 diff 检查通过。最新截图：`portfolio-yixin-concise-notes.png`、`portfolio-book-concise-notes.png`，替代上述长说明截图。
