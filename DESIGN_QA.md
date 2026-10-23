@@ -236,3 +236,7 @@
 - 五项导航测试、生产构建通过，142 模块，JS 217.12 KB（gzip 82.13 KB），CSS 28.07 KB（gzip 6.41 KB）。没有新增网站依赖，浏览器控制台没有警告或错误。检查使用桌面浏览器响应式尺寸，未在物理 iOS 设备验证。
 
 截图：`portfolio-book-psd-intro.png`、`portfolio-book-psd-layouts.png`、`portfolio-book-psd-mobile.png`。
+
+### 2026-10-24 书籍小预览封面
+
+按用户明确指定，将设计作品列表中的书籍小预览图替换为 `flowers-book-sleeve` 三连图。1440px 浏览器确认单张横幅完整 contain 展示，390px 无横向溢出，卡片可正常进入二十张图片的书籍详情。生产构建与 diff 检查通过。截图：`portfolio-book-triptych-cover.png`。

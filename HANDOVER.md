@@ -134,6 +134,6 @@ HEIC 转换仅在本地进行；现场照由 Display P3 转为 sRGB，样机透�
 
 ## 2026-10-24 当前维护状态：书籍 PSD 拆图
 
-`flowers-book` 采用 `bookDetails` 分组内容，由 `BookProjectDetails.jsx` 渲染。原四个展板 WebP 与两个映射已移除，替换为 20 张内容图、40 个 320／960px WebP。首图为封套，集合封面为封面书脊样机；`project.images` 从 `flowersBookDetails.sections` 按阅读顺序生成，计数与路由保持统一。
+`flowers-book` 采用 `bookDetails` 分组内容，由 `BookProjectDetails.jsx` 渲染。原四个展板 WebP 与两个映射已移除，替换为 20 张内容图、40 个 320／960px WebP。首图为封套，集合小预览封面也使用封套三连图；`project.images` 从 `flowersBookDetails.sections` 按阅读顺序生成，计数与路由保持统一。
 
 `flowersBook.js` 保存六项书籍信息和三个图文分区；总说明仍为一段，直接读取的 PSD 正文原文及图片提取图层边界见 SOURCES.md。桌面网格二／三列，平板双列，手机单列限宽，原图片保护逻辑继续生效。当前八项作品五十张图片，末两项仍为祝农丰和山东艺术学院基建。
