@@ -18,7 +18,7 @@ export default function BookProjectDetails({ project, lang }) {
   return <div className="book-project-details">
     <div className="book-project-hero">{artwork(leadKey, true)}</div>
     <dl className="book-specs">{facts.map(fact => <div key={fact.label}><dt>{en ? fact.labelEn : fact.label}</dt><dd>{en ? fact.valueEn : fact.value}</dd></div>)}</dl>
-    {sections.map((section, sectionIndex) => <section className="book-gallery-section" aria-labelledby={`book-${section.id}`} key={section.id}>
+    {sections.map((section, sectionIndex) => <section className={`book-gallery-section is-${section.id}`} aria-labelledby={`book-${section.id}`} key={section.id}>
       <header className="book-gallery-heading"><h2 className="project-section-title" id={`book-${section.id}`}><span className="book-section-number" aria-hidden="true">{String(sectionIndex + 1).padStart(2, '0')}</span>{en ? section.titleEn : section.title}</h2><p>{en ? section.textEn : section.text}</p></header>
       <div className={'book-artwork-grid' + (section.id === 'reading' ? ' is-reading' : '')}>
         {section.images.filter(key => key !== leadKey).map(key => artwork(key, false, section.id === 'reading'))}
