@@ -28,7 +28,29 @@ import flowers_book_1_960 from '../assets/projects/flowers-book-1-960.webp'
 import flowers_book_2_320 from '../assets/projects/flowers-book-2-320.webp'
 import flowers_book_2_960 from '../assets/projects/flowers-book-2-960.webp'
 
+import flowers_visual_stage_320 from '../assets/projects/flowers-visual-stage-320.webp'
+import flowers_visual_stage_960 from '../assets/projects/flowers-visual-stage-960.webp'
+import flowers_visual_key_320 from '../assets/projects/flowers-visual-key-320.webp'
+import flowers_visual_key_960 from '../assets/projects/flowers-visual-key-960.webp'
+import flowers_visual_program_1_320 from '../assets/projects/flowers-visual-program-1-320.webp'
+import flowers_visual_program_1_960 from '../assets/projects/flowers-visual-program-1-960.webp'
+import flowers_visual_program_2_320 from '../assets/projects/flowers-visual-program-2-320.webp'
+import flowers_visual_program_2_960 from '../assets/projects/flowers-visual-program-2-960.webp'
+import flowers_visual_staff_320 from '../assets/projects/flowers-visual-staff-320.webp'
+import flowers_visual_staff_960 from '../assets/projects/flowers-visual-staff-960.webp'
+import flowers_visual_cast_320 from '../assets/projects/flowers-visual-cast-320.webp'
+import flowers_visual_cast_960 from '../assets/projects/flowers-visual-cast-960.webp'
+import flowers_visual_print_320 from '../assets/projects/flowers-visual-print-320.webp'
+import flowers_visual_print_960 from '../assets/projects/flowers-visual-print-960.webp'
+
 export const projectImages = {
+  'flowers-visual-stage': { caption: '大屏幕主视觉现场展示', captionEn: 'Key visual on site', width: 4220, height: 3165, thumb: flowers_visual_stage_320, medium: flowers_visual_stage_960, gallerySpan: 'full' },
+  'flowers-visual-key': { caption: 'LED 大屏主视觉画面', captionEn: 'LED screen key visual', width: 6803, height: 2756, thumb: flowers_visual_key_320, medium: flowers_visual_key_960, gallerySpan: 'full' },
+  'flowers-visual-program-1': { caption: '节目单封面与内页设计', captionEn: 'Program cover and interior', width: 3000, height: 2000, thumb: flowers_visual_program_1_320, medium: flowers_visual_program_1_960 },
+  'flowers-visual-program-2': { caption: '节目单版式延展', captionEn: 'Program layout variations', width: 3000, height: 2000, thumb: flowers_visual_program_2_320, medium: flowers_visual_program_2_960 },
+  'flowers-visual-staff': { caption: '工作证设计', captionEn: 'Staff pass design', width: 4000, height: 2670, thumb: flowers_visual_staff_320, medium: flowers_visual_staff_960 },
+  'flowers-visual-cast': { caption: '演员证设计', captionEn: 'Cast pass design', width: 4000, height: 2670, thumb: flowers_visual_cast_320, medium: flowers_visual_cast_960 },
+  'flowers-visual-print': { caption: '节目单与证件实物记录', captionEn: 'Printed program and passes', width: 3024, height: 4032, thumb: flowers_visual_print_320, medium: flowers_visual_print_960, gallerySpan: 'full' },
   'yixin-1': { caption: '项目源起', captionEn: 'Project background', width: 3368, height: 4763, thumb: yixin_1_320, medium: yixin_1_960 },
   'yixin-2': { caption: '基础视觉系统与衍生品', captionEn: 'Core identity and merchandise', width: 3369, height: 4763, thumb: yixin_2_320, medium: yixin_2_960 },
   'yixin-3': { caption: '应用系统与导视标识', captionEn: 'Applications and wayfinding', width: 3368, height: 4763, thumb: yixin_3_320, medium: yixin_3_960 },

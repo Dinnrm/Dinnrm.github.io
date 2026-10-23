@@ -48,7 +48,10 @@ export const projects = [
   {
     id: 'flowers-visual', coverTitle: '花儿永远这样红', coverTitleEn: 'The Flowers Are Always So Red', listingTitle: '《花儿永远这样红》主视觉设计', listingTitleEn: 'The Flowers Are Always So Red · Key visual', tag: '演出视觉', tagEn: 'Performance',
     title: '音乐剧《花儿永远这样红》（济南内部演出版）主视觉设计', titleEn: 'Musical “The Flowers Are Always So Red” · Jinan internal production',
-    desc: '演出主视觉及配套物料设计。', descEn: 'Key visual and supporting materials for the performance.', categories: ['visual'],
+    desc: '围绕原创音乐剧《花儿永远这样红》的故事内核，提取红花意象与民族织物纹样，以热烈的红色和金色标题构建统一的演出视觉。通过织物般的层叠与流动营造舞台氛围，并将主视觉延展至 LED 大屏、节目单、工作证与演员证，在不同观看尺度与使用场景中保持识别一致，呼应鲁疆同心、民族团结的主题。',
+    descEn: 'A visual system for the original musical “The Flowers Are Always So Red,” combining flower imagery and traditional textile patterns with vivid red and gold-toned titles. Layered, flowing fabric forms establish the theatrical atmosphere, while the identity extends across LED screens, programs, staff passes and cast passes. Consistent visual elements connect different viewing scales and uses, reflecting the production’s themes of solidarity between Shandong and Xinjiang.',
+    categories: ['visual'], galleryLayout: 'showcase', coverImages: ['flowers-visual-stage'],
+    images: ['flowers-visual-stage', 'flowers-visual-key', 'flowers-visual-program-1', 'flowers-visual-program-2', 'flowers-visual-staff', 'flowers-visual-cast', 'flowers-visual-print'],
   },
   {
     id: 'kunlun', coverTitle: '昆仑谣', coverTitleEn: 'Kunlun Yao', listingTitle: '昆仑谣 · 数字文旅与 AIGC 大赛', listingTitleEn: 'Kunlun Yao · Digital tourism & AIGC', tag: '赛事视觉', tagEn: 'Competition',

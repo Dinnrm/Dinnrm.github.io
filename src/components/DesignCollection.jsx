@@ -18,13 +18,13 @@ export default function DesignCollection({ lang, filter, setFilter, navigate }) 
       <p className="sr-only" role="status">{t.showing.replace('{count}', visible.length)}</p>
       <div className="work-card-grid">
         {visible.map((project, order) => {
-          const coverImages = (project.images || []).slice(0, 2).map(key => projectImages[key])
+          const coverImages = (project.coverImages || project.images || []).slice(0, 2).map(key => projectImages[key])
           const title = en ? project.titleEn : project.title
           return <article className="work-preview-card motion-item" key={project.id} style={{ '--order': order }}>
             <a className="work-preview-link" id={`project-link-${project.id}`} data-project-link href={`#/works/${project.id}`} onClick={event => navigate(`works/${project.id}`, event)} aria-label={`${t.viewProject} · ${title}`}>
               <div className={`work-cover ${coverImages.length ? 'has-artwork' : 'has-typography'}`} data-protected-image>
                 {coverImages.length ? <div className="work-cover-artworks" style={{ '--preview-count': coverImages.length }}>
-                  {coverImages.map(image => <img key={image.thumb} src={image.thumb} srcSet={`${image.thumb} 320w, ${image.medium} 960w`} sizes="(max-width: 767px) 120px, (max-width: 1099px) 190px, 240px" width={image.width} height={image.height} loading="lazy" decoding="async" draggable="false" alt="" />)}
+                  {coverImages.map(image => <img key={image.thumb} src={image.thumb} srcSet={`${image.thumb} 320w, ${image.medium} 960w`} sizes={coverImages.length === 1 ? '(max-width: 767px) 280px, (max-width: 1099px) 360px, 480px' : '(max-width: 767px) 120px, (max-width: 1099px) 190px, 240px'} width={image.width} height={image.height} loading="lazy" decoding="async" draggable="false" alt="" />)}
                 </div> : <div className="work-type-cover" aria-hidden="true"><span className="cover-discipline">{en ? project.tagEn : project.tag}</span><span className="cover-name">{en ? project.coverTitleEn : project.coverTitle}</span><span className="cover-rule" /></div>}
                 <span className="work-cover-marker" aria-hidden="true">{String(projects.indexOf(project) + 1).padStart(2, '0')}</span>
                 <span className="work-cover-count">{coverImages.length ? t.imageCount.replace('{count}', project.images.length) : t.projectRecord}</span>
