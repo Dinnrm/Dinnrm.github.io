@@ -1,4 +1,5 @@
 // 站点内容（来自 个人介绍.docx）。修改只动这里。
+import { flowersBookDetails } from './flowersBook.js'
 
 export const profile = {
   name: '丁若木',
@@ -74,7 +75,7 @@ export const projects = [
     id: 'flowers-book', coverTitle: '花儿永远这样红', coverTitleEn: 'The Flowers Are Always So Red', tag: '书籍装帧', tagEn: 'Book design', title: '《花儿永远这样红》书籍装帧设计', titleEn: '“The Flowers Are Always So Red” · Book design',
     desc: "作为原创音乐剧《花儿永远这样红》的配套出版物，以红花意象、民族织物纹样和热烈的红色构建视觉叙事，融合舞台剧照、主创信息与曲谱。装帧采用锁线精装与双层封套，通过白色特种纸异形模切、内层红色封面及烫金标题，呼应“守护繁花”的故事内核，传递鲁疆同心、民族团结的主题。",
     descEn: "A companion publication for the musical “The Flowers Are Always So Red,” combining flower imagery, traditional textile patterns and vivid red with stage photographs, creative-team information and musical scores. A sewn hardcover and two-layer sleeve pair die-cut white specialty paper with a red inner cover and gold-foil title. The layered construction echoes the story’s idea of protecting flowers and its themes of solidarity between Shandong and Xinjiang.",
-    categories: ['book'], images: ['flowers-book-1', 'flowers-book-2'],
+    categories: ['book'], bookDetails: flowersBookDetails, coverImages: ['flowers-book-cover-mockup-3'], images: flowersBookDetails.sections.flatMap(section => section.images),
   },
   {
     id: 'zhunongfeng', coverTitle: '祝农丰 · 科小七', coverTitleEn: 'Zhunongfeng · Ke Xiaoqi', tag: '品牌设计', tagEn: 'Brand identity', title: '祝农丰、科小七品牌设计', titleEn: 'Zhunongfeng & Ke Xiaoqi · Brand identity', categories: ['brand'],

@@ -1,3 +1,44 @@
+import flowers_book_sleeve_320 from '../assets/projects/flowers-book-sleeve-320.webp'
+import flowers_book_sleeve_960 from '../assets/projects/flowers-book-sleeve-960.webp'
+import flowers_book_cover_320 from '../assets/projects/flowers-book-cover-320.webp'
+import flowers_book_cover_960 from '../assets/projects/flowers-book-cover-960.webp'
+import flowers_book_cover_mockup_1_320 from '../assets/projects/flowers-book-cover-mockup-1-320.webp'
+import flowers_book_cover_mockup_1_960 from '../assets/projects/flowers-book-cover-mockup-1-960.webp'
+import flowers_book_cover_mockup_2_320 from '../assets/projects/flowers-book-cover-mockup-2-320.webp'
+import flowers_book_cover_mockup_2_960 from '../assets/projects/flowers-book-cover-mockup-2-960.webp'
+import flowers_book_cover_mockup_3_320 from '../assets/projects/flowers-book-cover-mockup-3-320.webp'
+import flowers_book_cover_mockup_3_960 from '../assets/projects/flowers-book-cover-mockup-3-960.webp'
+import flowers_book_spread_1_320 from '../assets/projects/flowers-book-spread-1-320.webp'
+import flowers_book_spread_1_960 from '../assets/projects/flowers-book-spread-1-960.webp'
+import flowers_book_spread_2_320 from '../assets/projects/flowers-book-spread-2-320.webp'
+import flowers_book_spread_2_960 from '../assets/projects/flowers-book-spread-2-960.webp'
+import flowers_book_spread_3_320 from '../assets/projects/flowers-book-spread-3-320.webp'
+import flowers_book_spread_3_960 from '../assets/projects/flowers-book-spread-3-960.webp'
+import flowers_book_spread_4_320 from '../assets/projects/flowers-book-spread-4-320.webp'
+import flowers_book_spread_4_960 from '../assets/projects/flowers-book-spread-4-960.webp'
+import flowers_book_spread_5_320 from '../assets/projects/flowers-book-spread-5-320.webp'
+import flowers_book_spread_5_960 from '../assets/projects/flowers-book-spread-5-960.webp'
+import flowers_book_spread_6_320 from '../assets/projects/flowers-book-spread-6-320.webp'
+import flowers_book_spread_6_960 from '../assets/projects/flowers-book-spread-6-960.webp'
+import flowers_book_reading_1_320 from '../assets/projects/flowers-book-reading-1-320.webp'
+import flowers_book_reading_1_960 from '../assets/projects/flowers-book-reading-1-960.webp'
+import flowers_book_reading_2_320 from '../assets/projects/flowers-book-reading-2-320.webp'
+import flowers_book_reading_2_960 from '../assets/projects/flowers-book-reading-2-960.webp'
+import flowers_book_reading_3_320 from '../assets/projects/flowers-book-reading-3-320.webp'
+import flowers_book_reading_3_960 from '../assets/projects/flowers-book-reading-3-960.webp'
+import flowers_book_reading_4_320 from '../assets/projects/flowers-book-reading-4-320.webp'
+import flowers_book_reading_4_960 from '../assets/projects/flowers-book-reading-4-960.webp'
+import flowers_book_reading_5_320 from '../assets/projects/flowers-book-reading-5-320.webp'
+import flowers_book_reading_5_960 from '../assets/projects/flowers-book-reading-5-960.webp'
+import flowers_book_reading_6_320 from '../assets/projects/flowers-book-reading-6-320.webp'
+import flowers_book_reading_6_960 from '../assets/projects/flowers-book-reading-6-960.webp'
+import flowers_book_reading_7_320 from '../assets/projects/flowers-book-reading-7-320.webp'
+import flowers_book_reading_7_960 from '../assets/projects/flowers-book-reading-7-960.webp'
+import flowers_book_reading_8_320 from '../assets/projects/flowers-book-reading-8-320.webp'
+import flowers_book_reading_8_960 from '../assets/projects/flowers-book-reading-8-960.webp'
+import flowers_book_reading_9_320 from '../assets/projects/flowers-book-reading-9-320.webp'
+import flowers_book_reading_9_960 from '../assets/projects/flowers-book-reading-9-960.webp'
+
 import shoumo_brush_320 from '../assets/projects/shoumo-brush-320.webp'
 import shoumo_brush_960 from '../assets/projects/shoumo-brush-960.webp'
 import shoumo_ink_320 from '../assets/projects/shoumo-ink-320.webp'
@@ -23,10 +64,6 @@ import yixin_4_320 from '../assets/projects/yixin-4-320.webp'
 import yixin_4_960 from '../assets/projects/yixin-4-960.webp'
 import yixin_5_320 from '../assets/projects/yixin-5-320.webp'
 import yixin_5_960 from '../assets/projects/yixin-5-960.webp'
-import flowers_book_1_320 from '../assets/projects/flowers-book-1-320.webp'
-import flowers_book_1_960 from '../assets/projects/flowers-book-1-960.webp'
-import flowers_book_2_320 from '../assets/projects/flowers-book-2-320.webp'
-import flowers_book_2_960 from '../assets/projects/flowers-book-2-960.webp'
 
 import flowers_visual_stage_320 from '../assets/projects/flowers-visual-stage-320.webp'
 import flowers_visual_stage_960 from '../assets/projects/flowers-visual-stage-960.webp'
@@ -67,6 +104,26 @@ import kunlun_print_320 from '../assets/projects/kunlun-print-320.webp'
 import kunlun_print_960 from '../assets/projects/kunlun-print-960.webp'
 
 export const projectImages = {
+  'flowers-book-sleeve': { caption: '双层封套与镂空装帧', captionEn: 'Two-layer sleeve and die-cut construction', width: 3297, height: 1139, thumb: flowers_book_sleeve_320, medium: flowers_book_sleeve_960 },
+  'flowers-book-cover': { caption: '封面与封底展开', captionEn: 'Front and back cover', width: 1004, height: 638, thumb: flowers_book_cover_320, medium: flowers_book_cover_960 },
+  'flowers-book-cover-mockup-1': { caption: '封面与封底效果', captionEn: 'Front and back cover mockup', width: 1036, height: 691, thumb: flowers_book_cover_mockup_1_320, medium: flowers_book_cover_mockup_1_960 },
+  'flowers-book-cover-mockup-2': { caption: '精装书体与书脊', captionEn: 'Hardcover construction and spine', width: 1035, height: 691, thumb: flowers_book_cover_mockup_2_320, medium: flowers_book_cover_mockup_2_960 },
+  'flowers-book-cover-mockup-3': { caption: '封面与书脊效果', captionEn: 'Cover and spine mockup', width: 1034, height: 690, thumb: flowers_book_cover_mockup_3_320, medium: flowers_book_cover_mockup_3_960 },
+  'flowers-book-spread-1': { caption: '扉页与主题导入', captionEn: 'Opening spread and theme', width: 998, height: 706, thumb: flowers_book_spread_1_320, medium: flowers_book_spread_1_960 },
+  'flowers-book-spread-2': { caption: '前言与目录', captionEn: 'Foreword and contents', width: 1000, height: 707, thumb: flowers_book_spread_2_320, medium: flowers_book_spread_2_960 },
+  'flowers-book-spread-3': { caption: '舞台全景跨页', captionEn: 'Full-stage spread', width: 999, height: 706, thumb: flowers_book_spread_3_320, medium: flowers_book_spread_3_960 },
+  'flowers-book-spread-4': { caption: '剧情与舞台图像 · 一', captionEn: 'Story and stage photographs · I', width: 996, height: 705, thumb: flowers_book_spread_4_320, medium: flowers_book_spread_4_960 },
+  'flowers-book-spread-5': { caption: '剧情与舞台图像 · 二', captionEn: 'Story and stage photographs · II', width: 998, height: 706, thumb: flowers_book_spread_5_320, medium: flowers_book_spread_5_960 },
+  'flowers-book-spread-6': { caption: '演员介绍版式', captionEn: 'Cast profiles', width: 997, height: 706, thumb: flowers_book_spread_6_320, medium: flowers_book_spread_6_960 },
+  'flowers-book-reading-1': { caption: '主题扉页阅读效果', captionEn: 'Opening spread mockup', width: 997, height: 748, thumb: flowers_book_reading_1_320, medium: flowers_book_reading_1_960 },
+  'flowers-book-reading-2': { caption: '前言与目录阅读效果', captionEn: 'Foreword and contents mockup', width: 993, height: 745, thumb: flowers_book_reading_2_320, medium: flowers_book_reading_2_960 },
+  'flowers-book-reading-3': { caption: '剧情跨页阅读效果 · 一', captionEn: 'Story spread mockup · I', width: 998, height: 748, thumb: flowers_book_reading_3_320, medium: flowers_book_reading_3_960 },
+  'flowers-book-reading-4': { caption: '剧情跨页阅读效果 · 二', captionEn: 'Story spread mockup · II', width: 1000, height: 750, thumb: flowers_book_reading_4_320, medium: flowers_book_reading_4_960 },
+  'flowers-book-reading-5': { caption: '剧情跨页阅读效果 · 三', captionEn: 'Story spread mockup · III', width: 997, height: 747, thumb: flowers_book_reading_5_320, medium: flowers_book_reading_5_960 },
+  'flowers-book-reading-6': { caption: '演员介绍阅读效果', captionEn: 'Cast profiles mockup', width: 998, height: 748, thumb: flowers_book_reading_6_320, medium: flowers_book_reading_6_960 },
+  'flowers-book-reading-7': { caption: '主创与曲目阅读效果', captionEn: 'Creative team and track listing', width: 1003, height: 753, thumb: flowers_book_reading_7_320, medium: flowers_book_reading_7_960 },
+  'flowers-book-reading-8': { caption: '音乐剧曲谱 · 一', captionEn: 'Musical score · I', width: 999, height: 749, thumb: flowers_book_reading_8_320, medium: flowers_book_reading_8_960 },
+  'flowers-book-reading-9': { caption: '音乐剧曲谱 · 二', captionEn: 'Musical score · II', width: 996, height: 748, thumb: flowers_book_reading_9_320, medium: flowers_book_reading_9_960 },
   'kunlun-stage': { caption: '大会现场主视觉', captionEn: 'Conference key visual on site', width: 4032, height: 3024, thumb: kunlun_stage_320, medium: kunlun_stage_960 },
   'kunlun-key': { caption: '赛事主视觉画面', captionEn: 'Competition key visual', width: 31496, height: 10709, thumb: kunlun_key_320, medium: kunlun_key_960 },
   'kunlun-outdoor': { caption: '户外展架实景', captionEn: 'Outdoor display in use', width: 3013, height: 2260, thumb: kunlun_outdoor_320, medium: kunlun_outdoor_960 },
@@ -90,8 +147,6 @@ export const projectImages = {
   'yixin-3': { caption: '应用系统与导视标识', captionEn: 'Applications and wayfinding', width: 3368, height: 4763, thumb: yixin_3_320, medium: yixin_3_960 },
   'yixin-4': { caption: '标志与衍生品实景应用', captionEn: 'Identity and merchandise in use', width: 3369, height: 4763, thumb: yixin_4_320, medium: yixin_4_960 },
   'yixin-5': { caption: '衍生品应用与社会反馈', captionEn: 'Merchandise and social response', width: 3368, height: 4763, thumb: yixin_5_320, medium: yixin_5_960 },
-  'flowers-book-1': { caption: '设计理念与封面装帧', captionEn: 'Design concept and cover construction', width: 3508, height: 4961, thumb: flowers_book_1_320, medium: flowers_book_1_960 },
-  'flowers-book-2': { caption: '内页排版与书籍效果', captionEn: 'Page layouts and book presentation', width: 3508, height: 4961, thumb: flowers_book_2_320, medium: flowers_book_2_960 },
   'shoumo-brush': { caption: '湖笔', captionEn: 'Huzhou brush', width: 3368, height: 4763, thumb: shoumo_brush_320, medium: shoumo_brush_960 },
   'shoumo-ink': { caption: '徽墨', captionEn: 'Huizhou ink', width: 3368, height: 4763, thumb: shoumo_ink_320, medium: shoumo_ink_960 },
   'shoumo-paper': { caption: '宣纸', captionEn: 'Xuan paper', width: 3368, height: 4763, thumb: shoumo_paper_320, medium: shoumo_paper_960 },

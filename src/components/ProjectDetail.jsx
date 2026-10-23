@@ -1,6 +1,7 @@
 import { projectImages } from '../data/projectImages.js'
 import { copy } from '../data/translations.js'
 import Icon from './Icon.jsx'
+import BookProjectDetails from './BookProjectDetails.jsx'
 
 export default function ProjectDetail({ project, lang, navigate }) {
   const en = lang === 'en'
@@ -14,7 +15,7 @@ export default function ProjectDetail({ project, lang, navigate }) {
       <a className="project-back" href="#/works" onClick={event => navigate('works', event, { restoreCollection: true })}><Icon name="back" />{t.backWorks}</a>
       <header className="project-detail-heading"><p className="section-label">{en ? project.tagEn : project.tag}</p><h1 id="project-title" tabIndex={-1}>{title}</h1></header>
       <div className="project-description"><h2 className="project-section-title">{t.projectNotes}</h2><div className="project-description-body">{(description || t.descriptionPending).split(/\n\s*\n/).map((paragraph, index) => <p key={index}>{paragraph}</p>)}</div></div>
-      <div className={'project-artwork-block' + (showcase ? ' has-showcase' : '')}><h2 className="project-section-title">{t.projectGallery}</h2>
+      {project.bookDetails ? <BookProjectDetails project={project} lang={lang} /> : <div className={'project-artwork-block' + (showcase ? ' has-showcase' : '')}><h2 className="project-section-title">{t.projectGallery}</h2>
       {project.images?.length ? <div className={'project-artwork-list' + (showcase ? ' is-showcase' : '') + (galleryRow.length ? ' has-three-up' : '')}>
         {project.images.map((key, index) => {
           const image = projectImages[key]
@@ -27,7 +28,7 @@ export default function ProjectDetail({ project, lang, navigate }) {
             <figcaption><span>{caption}</span><span>{String(index + 1).padStart(2, '0')} / {String(project.images.length).padStart(2, '0')}</span></figcaption>
           </figure>
         })}
-      </div> : <p className="project-images-pending">{t.imagesPending}</p>}</div>
+      </div> : <p className="project-images-pending">{t.imagesPending}</p>}</div>}
     </section>
   )
 }

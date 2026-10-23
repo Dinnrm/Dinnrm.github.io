@@ -401,11 +401,35 @@ img { -webkit-user-drag: none; -webkit-touch-callout: none; user-select: none; }
 .has-three-up > .project-artwork.is-row-item { grid-column: auto; width: 100%; justify-self: stretch; }
 .is-row-item .project-artwork-surface { height: clamp(170px, 35vw, 420px); padding: clamp(8px, 2vw, 24px); }
 .is-row-item .project-artwork-surface img { height: 100%; max-height: 100%; }
+/* Book artwork is extracted from the boards and arranged as a readable case study. */
+.book-project-hero { margin-top: 36px; }
+.book-specs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px 40px; margin: 36px 0 64px; padding-top: 28px; border-top: 1px solid var(--line); }
+.book-specs > div { min-width: 0; }
+.book-specs dt { font-size: 11px; color: var(--muted); margin-bottom: 9px; }
+.book-specs dd { margin: 0; font-size: 13px; line-height: 1.9; white-space: pre-line; overflow-wrap: anywhere; }
+.book-gallery-section + .book-gallery-section { margin-top: 64px; }
+.book-gallery-heading { display: grid; grid-template-columns: minmax(160px, .32fr) minmax(0, 1fr); gap: 48px; border-top: 1px solid var(--line); padding-top: 28px; margin-bottom: 28px; }
+.book-section-number { font-size: 11px; color: var(--muted); letter-spacing: .04em; }
+.book-gallery-heading .project-section-title::before { display: none; }
+.book-gallery-heading > p { max-width: 680px; font-size: 13px; line-height: 2; color: var(--muted); }
+.book-artwork-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 28px; }
+.book-artwork-grid.is-reading { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.book-artwork { min-width: 0; }
+.book-artwork.is-lead { grid-column: 1 / -1; }
+.book-artwork .project-artwork-surface { padding: 0; overflow: hidden; }
+.book-artwork:not(.is-lead) .project-artwork-surface { aspect-ratio: 3 / 2; display: grid; place-items: center; }
+.book-artwork .project-artwork-surface img { width: 100%; height: 100%; max-height: 520px; object-fit: contain; }
+.book-artwork.is-lead .project-artwork-surface img { height: auto; }
+.book-artwork figcaption { font-size: 11px; gap: 12px; }
+.book-artwork figcaption > span:last-child { white-space: nowrap; flex: none; }
 @media (max-width: 1099px) and (min-width: 768px) {
   .work-cover { --cover-inset: 28px; }
   .cover-name { font-size: 28px; }
   .project-description, .project-artwork-block { grid-template-columns: 140px minmax(0, 1fr); gap: 28px; }
   .project-artwork-list { width: min(560px, 100%); }
+  .book-artwork-grid.is-reading { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .book-gallery-heading { grid-template-columns: 140px minmax(0, 1fr); gap: 28px; }
+  .book-specs { gap: 24px; }
 }
 @media (max-width: 767px) {
   .work-index-heading { gap: 18px; margin-bottom: 30px; }
@@ -430,6 +454,13 @@ img { -webkit-user-drag: none; -webkit-touch-callout: none; user-select: none; }
   .has-three-up > .project-artwork:not(.is-row-item) { width: min(280px, 88%); justify-self: center; }
   .is-row-item .project-artwork-surface { padding: 8px; }
   .is-row-item figcaption { font-size: 10px; gap: 4px; flex-direction: column; }
+  .book-specs { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 20px; margin-block: 28px 40px; padding-top: 24px; }
+  .book-specs dd { font-size: 12px; }
+  .book-specs > div:nth-child(4), .book-specs > div:last-child { grid-column: 1 / -1; }
+  .book-gallery-heading { grid-template-columns: 1fr; gap: 14px; padding-top: 24px; margin-bottom: 24px; }
+  .book-gallery-section + .book-gallery-section { margin-top: 40px; }
+  .book-artwork-grid, .book-artwork-grid.is-reading { grid-template-columns: minmax(0, 1fr); width: min(280px, 88%); margin-inline: auto; gap: 26px; }
+  .book-project-hero { width: min(280px, 88%); margin: 28px auto 0; }
 }
 @media (prefers-reduced-motion: reduce) {
   .work-preview-link:hover .work-cover-artworks, .work-preview-link:hover .work-card-arrow { transform: none; }
