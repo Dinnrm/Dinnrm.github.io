@@ -197,3 +197,5 @@
 - 验证为桌面浏览器响应式尺寸检查，未在物理 iPhone／iPad 上测量性能。公开图片副本仍无法绝对防止截图或提取。
 
 截图：`portfolio-flowers-visual-intro.png`、`portfolio-flowers-visual-applications.png`、`portfolio-flowers-visual-mobile.png`。
+
+按用户补充要求，主视觉项目标题删除“济南内部演出版”，英文删除对应表述；详情、网页标题和图片说明由同一记录同步更新。
