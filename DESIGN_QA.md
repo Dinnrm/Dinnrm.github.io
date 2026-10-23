@@ -216,3 +216,12 @@
 - 验证为桌面浏览器响应式视口检查，未在物理 iOS 设备测量性能；公开展示图仍无法绝对防止截图或提取。
 
 截图：`portfolio-kunlun-intro.png`、`portfolio-kunlun-handbook.png`、`portfolio-kunlun-mobile.png`。
+
+### 2026-10-24 昆仑谣顺序与竖版同排、作品排序
+
+- 签到处视觉设计移到详情第一张（01 / 11），两张竖版展架与演讲台设计连续排成三列，其余八张继续各占一行。图片保留 contain、独立图注与操作限制。
+- 浏览器检查 1440／768／390／320px：三张竖版同一行、展示底面等高、十一张图片保留、无横向溢出；手机采用较小列间距。桌面逐张检查同排图片及首张均正常加载，点击没有改变作品路由。
+- 手机列表确认八项作品，末两项依次为祝农丰／科小七、山东艺术学院基建；中英文与各设备共用同一记录顺序。音乐剧主视觉仍为七张单列，未受影响。
+- 五项导航测试、生产构建通过；104 模块，JS 188.36 KB（gzip 62.12 KB），CSS 25.81 KB（gzip 6.05 KB）。浏览器控制台没有警告或错误。响应式检查在桌面浏览器完成。
+
+截图：`portfolio-kunlun-three-up.png`、`portfolio-kunlun-three-up-mobile.png`、`portfolio-kunlun-registration-first.png`。

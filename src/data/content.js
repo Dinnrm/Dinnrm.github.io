@@ -60,7 +60,8 @@ export const projects = [
     desc: '为“昆仑谣·数字文旅创作大赛”暨 2026 AIGC 多模态创新设计与技术应用大赛山东赛区构建统一视觉系统。以蓝紫渐变、数字空间与流动点阵营造科技感，结合立体 AIGC 字形强化赛事识别，并延展至会场大屏、户外展架、签到处、演讲台及会议手册，在空间导视与纸面阅读之间保持清晰、连贯的视觉体验。',
     descEn: 'A visual system for the Shandong division of the Kunlun Yao Digital Cultural Tourism Creation Competition and the 2026 AIGC Multimodal Innovation Design and Technology Application Competition. Blue-to-purple gradients, digital space and flowing dot patterns establish a technological character, while dimensional AIGC lettering strengthens recognition. The identity extends across stage screens, outdoor displays, registration graphics, lectern panels and a conference handbook, connecting spatial orientation with clear, consistent print communication.',
     categories: ['visual'], galleryLayout: 'showcase', coverImages: ['kunlun-stage'],
-    images: ['kunlun-stage', 'kunlun-key', 'kunlun-outdoor', 'kunlun-panel-1', 'kunlun-panel-2', 'kunlun-registration', 'kunlun-podium', 'kunlun-book-mockup', 'kunlun-book-cover', 'kunlun-book-inside', 'kunlun-print'],
+    galleryRow: ['kunlun-panel-1', 'kunlun-panel-2', 'kunlun-podium'],
+    images: ['kunlun-registration', 'kunlun-stage', 'kunlun-key', 'kunlun-outdoor', 'kunlun-panel-1', 'kunlun-panel-2', 'kunlun-podium', 'kunlun-book-mockup', 'kunlun-book-cover', 'kunlun-book-inside', 'kunlun-print'],
   },
   {
     id: 'yixin', coverTitle: '艺心为民', coverTitleEn: 'Yixin Weimin', listingTitle: '济南市文化馆「艺心为民」视觉系统', listingTitleEn: 'Jinan Cultural Center · Yixin Weimin', tag: '品牌设计', tagEn: 'Brand identity',
@@ -70,13 +71,13 @@ export const projects = [
     categories: ['brand'], images: ['yixin-1', 'yixin-2', 'yixin-3', 'yixin-4', 'yixin-5'],
   },
   {
-    id: 'zhunongfeng', coverTitle: '祝农丰 · 科小七', coverTitleEn: 'Zhunongfeng · Ke Xiaoqi', tag: '品牌设计', tagEn: 'Brand identity', title: '祝农丰、科小七品牌设计', titleEn: 'Zhunongfeng & Ke Xiaoqi · Brand identity', categories: ['brand'],
-  },
-  {
     id: 'flowers-book', coverTitle: '花儿永远这样红', coverTitleEn: 'The Flowers Are Always So Red', tag: '书籍装帧', tagEn: 'Book design', title: '《花儿永远这样红》书籍装帧设计', titleEn: '“The Flowers Are Always So Red” · Book design',
     desc: "作为原创音乐剧《花儿永远这样红》的配套出版物，以红花意象、民族织物纹样和热烈的红色构建视觉叙事，融合舞台剧照、主创信息与曲谱。装帧采用锁线精装与双层封套，通过白色特种纸异形模切、内层红色封面及烫金标题，呼应“守护繁花”的故事内核，传递鲁疆同心、民族团结的主题。",
     descEn: "A companion publication for the musical “The Flowers Are Always So Red,” combining flower imagery, traditional textile patterns and vivid red with stage photographs, creative-team information and musical scores. A sewn hardcover and two-layer sleeve pair die-cut white specialty paper with a red inner cover and gold-foil title. The layered construction echoes the story’s idea of protecting flowers and its themes of solidarity between Shandong and Xinjiang.",
     categories: ['book'], images: ['flowers-book-1', 'flowers-book-2'],
+  },
+  {
+    id: 'zhunongfeng', coverTitle: '祝农丰 · 科小七', coverTitleEn: 'Zhunongfeng · Ke Xiaoqi', tag: '品牌设计', tagEn: 'Brand identity', title: '祝农丰、科小七品牌设计', titleEn: 'Zhunongfeng & Ke Xiaoqi · Brand identity', categories: ['brand'],
   },
   {
     id: 'campus', coverTitle: '山东艺术学院', coverTitleEn: 'Shandong University of Arts', tag: '校园服务', tagEn: 'Campus', title: '山东艺术学院基建设计', titleEn: 'Shandong University of Arts · Infrastructure design',
