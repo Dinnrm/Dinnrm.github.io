@@ -390,12 +390,12 @@ img { -webkit-user-drag: none; -webkit-touch-callout: none; user-select: none; }
 .project-images-pending { padding-block: 12px 48px; color: var(--muted); font-size: 13px; }
 .project-artwork-block.has-showcase { display: block; }
 .has-showcase > .project-section-title { margin-bottom: 28px; }
-.project-artwork-list.is-showcase { width: 100%; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px 24px; }
+.project-artwork-list.is-showcase { width: 100%; grid-template-columns: minmax(0, 1fr); gap: 36px; }
 .is-showcase .project-artwork { min-width: 0; }
 .is-showcase .project-artwork.is-wide { grid-column: 1 / -1; }
 .is-showcase .project-artwork.is-portrait { width: min(620px, 100%); justify-self: center; }
 .is-showcase .project-artwork-surface { padding: 24px; }
-.is-showcase .is-wide .project-artwork-surface img { max-width: 960px; margin-inline: auto; }
+.is-showcase .project-artwork-surface img { max-width: 960px; margin-inline: auto; }
 @media (max-width: 1099px) and (min-width: 768px) {
   .work-cover { --cover-inset: 28px; }
   .cover-name { font-size: 28px; }

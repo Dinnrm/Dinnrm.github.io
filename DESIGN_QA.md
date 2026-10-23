@@ -199,3 +199,5 @@
 截图：`portfolio-flowers-visual-intro.png`、`portfolio-flowers-visual-applications.png`、`portfolio-flowers-visual-mobile.png`。
 
 按用户补充要求，主视觉项目标题删除“济南内部演出版”，英文删除对应表述；详情、网页标题和图片说明由同一记录同步更新。
+
+按用户最新要求，主视觉详情七张图片统一为单列，每行一张；本条替代前述双栏配对排版。1440／768／390px 浏览器检查均为一列，七张图各占独立行，无横向溢出，图像 sizes 同步为整列宽度。生产构建及 diff 检查通过。最新截图：`portfolio-flowers-visual-single-column.png`。

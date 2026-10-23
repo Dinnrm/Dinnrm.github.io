@@ -19,7 +19,7 @@ export default function ProjectDetail({ project, lang, navigate }) {
           const image = projectImages[key]
           const caption = en ? image.captionEn : image.caption
           const full = showcase && image.gallerySpan === 'full'
-          const sizes = showcase ? (full ? '(max-width: 767px) 250px, (max-width: 1099px) calc(100vw - 160px), 960px' : '(max-width: 767px) 250px, (max-width: 1099px) calc(50vw - 100px), 500px') : '(max-width: 767px) 250px, (max-width: 1099px) 440px, 600px'
+          const sizes = showcase ? '(max-width: 767px) 250px, (max-width: 1099px) calc(100vw - 160px), 960px' : '(max-width: 767px) 250px, (max-width: 1099px) 440px, 600px'
           return <figure className={'project-artwork' + (full ? ' is-wide' : '') + (showcase && image.height > image.width ? ' is-portrait' : '')} key={key} data-protected-image>
             <div className="project-artwork-surface"><img src={image.medium} srcSet={`${image.thumb} 320w, ${image.medium} 960w`} sizes={sizes} width={image.width} height={image.height} alt={`${title} · ${caption}`} draggable="false" loading={index === 0 ? 'eager' : 'lazy'} decoding="async" /></div>
             <figcaption><span>{caption}</span><span>{String(index + 1).padStart(2, '0')} / {String(project.images.length).padStart(2, '0')}</span></figcaption>
