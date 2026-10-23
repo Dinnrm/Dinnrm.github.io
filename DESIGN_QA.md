@@ -253,3 +253,7 @@
 - 五项导航测试、生产构建和 diff 检查通过；142 模块，JS 197.90 KB（gzip 64.91 KB），CSS 28.07 KB（gzip 6.41 KB）。没有新增网站依赖，未在物理 iOS 设备验证。
 
 截图：`portfolio-book-cutout-cover-gray-frame.png`、`portfolio-book-cutout-reading.png`。
+
+### 2026-10-24 恢复书籍原图与第三张预览（当前版本）
+
+按最新要求，二十张书籍详情图片全部恢复原 WebP，保留摄影背景和投影；移除轮廓 SVG 与生成脚本。小预览使用详情第三张（03 / 20）“封面与封底效果”原图 `flowers-book-cover-mockup-1`，灰色展示底框保留。浏览器逐张检查二十张图片正常加载、零去背景引用；390px 无横向溢出，卡片仍可正常返回作品详情。控制台无警告或错误，生产构建及 diff 检查通过。截图：`portfolio-book-third-original-cover.png`、`portfolio-book-original-backgrounds-restored.png`。
