@@ -57,7 +57,10 @@ export const projects = [
     id: 'kunlun', coverTitle: '昆仑谣', coverTitleEn: 'Kunlun Yao', listingTitle: '昆仑谣 · 数字文旅与 AIGC 大赛', listingTitleEn: 'Kunlun Yao · Digital tourism & AIGC', tag: '赛事视觉', tagEn: 'Competition',
     title: '第19届全国3D大赛“昆仑谣·数字文旅创作大赛”暨2026AIGC多模态创新设计与技术应用大赛（山东赛区）视觉系统设计',
     titleEn: '19th National 3D Competition · Kunlun Yao Digital Cultural Tourism Creation Competition & 2026 AIGC Multimodal Innovation Design and Technology Application Competition (Shandong)',
-    desc: '山东赛区视觉系统设计。', descEn: 'Visual identity for the Shandong regional competition.', categories: ['visual'],
+    desc: '为“昆仑谣·数字文旅创作大赛”暨 2026 AIGC 多模态创新设计与技术应用大赛山东赛区构建统一视觉系统。以蓝紫渐变、数字空间与流动点阵营造科技感，结合立体 AIGC 字形强化赛事识别，并延展至会场大屏、户外展架、签到处、演讲台及会议手册，在空间导视与纸面阅读之间保持清晰、连贯的视觉体验。',
+    descEn: 'A visual system for the Shandong division of the Kunlun Yao Digital Cultural Tourism Creation Competition and the 2026 AIGC Multimodal Innovation Design and Technology Application Competition. Blue-to-purple gradients, digital space and flowing dot patterns establish a technological character, while dimensional AIGC lettering strengthens recognition. The identity extends across stage screens, outdoor displays, registration graphics, lectern panels and a conference handbook, connecting spatial orientation with clear, consistent print communication.',
+    categories: ['visual'], galleryLayout: 'showcase', coverImages: ['kunlun-stage'],
+    images: ['kunlun-stage', 'kunlun-key', 'kunlun-outdoor', 'kunlun-panel-1', 'kunlun-panel-2', 'kunlun-registration', 'kunlun-podium', 'kunlun-book-mockup', 'kunlun-book-cover', 'kunlun-book-inside', 'kunlun-print'],
   },
   {
     id: 'yixin', coverTitle: '艺心为民', coverTitleEn: 'Yixin Weimin', listingTitle: '济南市文化馆「艺心为民」视觉系统', listingTitleEn: 'Jinan Cultural Center · Yixin Weimin', tag: '品牌设计', tagEn: 'Brand identity',

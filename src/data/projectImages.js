@@ -43,7 +43,41 @@ import flowers_visual_cast_960 from '../assets/projects/flowers-visual-cast-960.
 import flowers_visual_print_320 from '../assets/projects/flowers-visual-print-320.webp'
 import flowers_visual_print_960 from '../assets/projects/flowers-visual-print-960.webp'
 
+import kunlun_stage_320 from '../assets/projects/kunlun-stage-320.webp'
+import kunlun_stage_960 from '../assets/projects/kunlun-stage-960.webp'
+import kunlun_key_320 from '../assets/projects/kunlun-key-320.webp'
+import kunlun_key_960 from '../assets/projects/kunlun-key-960.webp'
+import kunlun_outdoor_320 from '../assets/projects/kunlun-outdoor-320.webp'
+import kunlun_outdoor_960 from '../assets/projects/kunlun-outdoor-960.webp'
+import kunlun_panel_1_320 from '../assets/projects/kunlun-panel-1-320.webp'
+import kunlun_panel_1_960 from '../assets/projects/kunlun-panel-1-960.webp'
+import kunlun_panel_2_320 from '../assets/projects/kunlun-panel-2-320.webp'
+import kunlun_panel_2_960 from '../assets/projects/kunlun-panel-2-960.webp'
+import kunlun_registration_320 from '../assets/projects/kunlun-registration-320.webp'
+import kunlun_registration_960 from '../assets/projects/kunlun-registration-960.webp'
+import kunlun_podium_320 from '../assets/projects/kunlun-podium-320.webp'
+import kunlun_podium_850 from '../assets/projects/kunlun-podium-850.webp'
+import kunlun_book_mockup_320 from '../assets/projects/kunlun-book-mockup-320.webp'
+import kunlun_book_mockup_960 from '../assets/projects/kunlun-book-mockup-960.webp'
+import kunlun_book_cover_320 from '../assets/projects/kunlun-book-cover-320.webp'
+import kunlun_book_cover_960 from '../assets/projects/kunlun-book-cover-960.webp'
+import kunlun_book_inside_320 from '../assets/projects/kunlun-book-inside-320.webp'
+import kunlun_book_inside_960 from '../assets/projects/kunlun-book-inside-960.webp'
+import kunlun_print_320 from '../assets/projects/kunlun-print-320.webp'
+import kunlun_print_960 from '../assets/projects/kunlun-print-960.webp'
+
 export const projectImages = {
+  'kunlun-stage': { caption: '大会现场主视觉', captionEn: 'Conference key visual on site', width: 4032, height: 3024, thumb: kunlun_stage_320, medium: kunlun_stage_960 },
+  'kunlun-key': { caption: '赛事主视觉画面', captionEn: 'Competition key visual', width: 31496, height: 10709, thumb: kunlun_key_320, medium: kunlun_key_960 },
+  'kunlun-outdoor': { caption: '户外展架实景', captionEn: 'Outdoor display in use', width: 3013, height: 2260, thumb: kunlun_outdoor_320, medium: kunlun_outdoor_960 },
+  'kunlun-panel-1': { caption: '赛事视觉延展', captionEn: 'Competition display panel', width: 6299, height: 10709, thumb: kunlun_panel_1_320, medium: kunlun_panel_1_960 },
+  'kunlun-panel-2': { caption: '院校标识展架', captionEn: 'University identity panel', width: 6299, height: 10709, thumb: kunlun_panel_2_320, medium: kunlun_panel_2_960 },
+  'kunlun-registration': { caption: '签到处视觉设计', captionEn: 'Registration area graphics', width: 18898, height: 8189, thumb: kunlun_registration_320, medium: kunlun_registration_960 },
+  'kunlun-podium': { caption: '演讲台视觉设计', captionEn: 'Lectern graphics', width: 850, height: 2614, thumb: kunlun_podium_320, medium: kunlun_podium_850 },
+  'kunlun-book-mockup': { caption: '会议手册样机', captionEn: 'Conference handbook mockup', width: 3000, height: 2000, thumb: kunlun_book_mockup_320, medium: kunlun_book_mockup_960 },
+  'kunlun-book-cover': { caption: '会议手册封面展开', captionEn: 'Handbook cover spread', width: 4763, height: 3368, thumb: kunlun_book_cover_320, medium: kunlun_book_cover_960 },
+  'kunlun-book-inside': { caption: '会议手册内页设计', captionEn: 'Handbook interior layout', width: 4763, height: 3368, thumb: kunlun_book_inside_320, medium: kunlun_book_inside_960 },
+  'kunlun-print': { caption: '手册与证件实物记录', captionEn: 'Printed handbook and passes', width: 1280, height: 1707, thumb: kunlun_print_320, medium: kunlun_print_960 },
   'flowers-visual-stage': { caption: '大屏幕主视觉现场展示', captionEn: 'Key visual on site', width: 4220, height: 3165, thumb: flowers_visual_stage_320, medium: flowers_visual_stage_960, gallerySpan: 'full' },
   'flowers-visual-key': { caption: 'LED 大屏主视觉画面', captionEn: 'LED screen key visual', width: 6803, height: 2756, thumb: flowers_visual_key_320, medium: flowers_visual_key_960, gallerySpan: 'full' },
   'flowers-visual-program-1': { caption: '节目单封面与内页设计', captionEn: 'Program cover and interior', width: 3000, height: 2000, thumb: flowers_visual_program_1_320, medium: flowers_visual_program_1_960 },
