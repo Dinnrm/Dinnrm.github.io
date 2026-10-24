@@ -296,3 +296,7 @@
 首图为新2234×1040截图，第二张为新2580×1704截图；都生成320／960px WebP展示版，完整构图保留。浏览器确认无裁边类与绝对定位，object-fit: contain；桌面首图960×447px，第二张546×360.59px、与第三张等宽。390px 首图327×152.26px，第二张280×184.63px，仍二十张、无横向溢出。生产构建及 diff 检查通过，裁边代码移除。
 
 截图：`portfolio-book-new-original-presentation.png`、`portfolio-book-new-original-cover.png`。
+
+### 2026-10-24 书籍首图等边放大
+
+首图与下方网格左右边界均为72.5／1192.5px，宽1120px；390px下首图与栏目同宽327px。原图完整contain展示、无裁边和横向溢出。生产构建与diff检查通过。截图：`portfolio-book-aligned-edges.png`。

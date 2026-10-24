@@ -422,8 +422,8 @@ img { -webkit-user-drag: none; -webkit-touch-callout: none; user-select: none; }
 .book-artwork.is-lead .project-artwork-surface img { height: auto; }
 .book-artwork.is-natural-ratio .project-artwork-surface { aspect-ratio: auto; display: block; }
 .book-artwork.is-natural-ratio .project-artwork-surface img { height: auto; }
-.book-project-hero.is-edge-to-edge-hero { width: min(960px, 100%); margin-inline: auto; }
-.book-artwork.is-edge-to-edge { grid-column: 1 / -1; width: min(960px, 100%); justify-self: center; }
+.book-project-hero.is-edge-to-edge-hero { width: 100%; margin-inline: auto; }
+.book-artwork.is-edge-to-edge { grid-column: 1 / -1; width: 100%; justify-self: center; }
 .book-artwork.is-edge-to-edge .project-artwork-surface img { max-height: none; }
 .book-artwork figcaption { font-size: 11px; gap: 12px; }
 .book-artwork figcaption > span:last-child { white-space: nowrap; flex: none; }
@@ -470,7 +470,6 @@ img { -webkit-user-drag: none; -webkit-touch-callout: none; user-select: none; }
   .book-artwork-grid, .book-artwork-grid.is-reading { grid-template-columns: minmax(0, 1fr); width: min(280px, 88%); margin-inline: auto; gap: 26px; }
   .book-project-hero { width: min(280px, 88%); margin: 28px auto 0; }
   .identity-case-study .book-project-hero { width: min(280px, 88%); }
-  .book-project-hero.is-edge-to-edge-hero { width: 100%; }
 }
 @media (prefers-reduced-motion: reduce) {
   .work-preview-link:hover .work-cover-artworks, .work-preview-link:hover .work-card-arrow { transform: none; }
