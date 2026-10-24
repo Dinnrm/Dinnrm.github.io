@@ -425,8 +425,8 @@ img { -webkit-user-drag: none; -webkit-touch-callout: none; user-select: none; }
 .book-artwork figcaption > span:last-child { white-space: nowrap; flex: none; }
 .artwork-note { margin-top: 9px; max-width: 65ch; font-size: 11px; line-height: 1.8; color: var(--muted); }
 .identity-case-study .book-project-hero { width: min(900px, 100%); margin-inline: auto; }
-.identity-case-study .book-artwork .project-artwork-surface { aspect-ratio: auto; display: block; box-shadow: 0 1px 4px #22232108, 0 6px 20px #2223210d; }
-.identity-case-study .book-artwork .project-artwork-surface img { height: auto; max-height: none; }
+.identity-case-study .book-gallery-section:not(.is-identity) .book-artwork .project-artwork-surface { aspect-ratio: auto; display: block; box-shadow: 0 1px 4px #22232108, 0 6px 20px #2223210d; }
+.identity-case-study .book-gallery-section:not(.is-identity) .book-artwork .project-artwork-surface img { height: auto; max-height: none; }
 .book-artwork.is-white-surface .project-artwork-surface, .work-cover-artworks img.is-white-surface { background: #fff; }
 .identity-case-study .artwork-note { font-size: 12px; line-height: 1.95; white-space: pre-line; }
 .identity-case-study .book-project-hero .artwork-note { max-width: 760px; }
