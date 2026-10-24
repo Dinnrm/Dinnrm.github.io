@@ -1,3 +1,5 @@
+import shoumo_cover_320 from '../assets/projects/shoumo-cover-320.webp'
+import shoumo_cover_960 from '../assets/projects/shoumo-cover-960.webp'
 import shen_cover_320 from '../assets/projects/shen-cover-320.webp'
 import shen_cover_960 from '../assets/projects/shen-cover-960.webp'
 import yixin_identity_320 from '../assets/projects/yixin-identity-320.webp'
@@ -161,6 +163,7 @@ import kunlun_print_320 from '../assets/projects/kunlun-print-320.webp'
 import kunlun_print_960 from '../assets/projects/kunlun-print-960.webp'
 
 export const projectImages = {
+  'shoumo-cover': { caption: '守墨非遗海报效果展示', captionEn: 'Shoumo heritage poster presentation', width: 6000, height: 4000, thumb: shoumo_cover_320, medium: shoumo_cover_960 },
   'shen-cover': { caption: '《慎》系列海报效果展示', captionEn: 'Shen poster series presentation', width: 4000, height: 3000, thumb: shen_cover_320, medium: shen_cover_960 },
   'yixin-identity': { caption: "品牌主标志", captionEn: "Primary brand identity", width: 1040, height: 388, thumb: yixin_identity_320, medium: yixin_identity_960 },
   'yixin-construction': { caption: "标志标准制图", captionEn: "Logo construction grid", width: 1326, height: 640, thumb: yixin_construction_320, medium: yixin_construction_960 },

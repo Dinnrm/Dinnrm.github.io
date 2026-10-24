@@ -39,7 +39,7 @@ export const projects = [
     id: 'shoumo', tag: '海报设计', tagEn: 'Poster series', title: '守墨非遗', titleEn: 'Shoumo · Intangible heritage',
     desc: '通过对传统非遗文化市场的调研，结合当下国内手工非遗的存在，结合现代化设计，以当下较为风靡的信息可视化海报进行平面设计，来唤醒人们群众对目前正在逐渐消失的非遗手工的关注，增加人民群众对非遗的重视，进而传承和发扬正在消失的非遗技艺。',
     descEn: 'Based on research into traditional intangible cultural heritage and contemporary handmade crafts in China, this series uses modern information visualization to draw attention to disappearing craft traditions, encourage public awareness, and support their preservation and transmission.',
-    categories: ['poster'], images: ['shoumo-brush', 'shoumo-ink', 'shoumo-paper', 'shoumo-inkstone'],
+    categories: ['poster'], coverImages: ['shoumo-cover'], images: ['shoumo-cover', 'shoumo-brush', 'shoumo-ink', 'shoumo-paper', 'shoumo-inkstone'],
   },
   {
     id: 'shen', tag: '海报设计', tagEn: 'Poster series', title: '《慎》系列海报设计', titleEn: '“Shen” · Caution poster series',
