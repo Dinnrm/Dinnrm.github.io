@@ -290,3 +290,9 @@
 - 四个尺寸均保留20张图片、无横向溢出；其他原图和列表预览未改动，控制台无警告或错误。生产构建及 diff 检查通过，无新增依赖。
 
 截图：`portfolio-book-trimmed-presentation.png`。
+
+### 2026-10-24 替换两张书籍原图（当前版本）
+
+首图为新2234×1040截图，第二张为新2580×1704截图；都生成320／960px WebP展示版，完整构图保留。浏览器确认无裁边类与绝对定位，object-fit: contain；桌面首图960×447px，第二张546×360.59px、与第三张等宽。390px 首图327×152.26px，第二张280×184.63px，仍二十张、无横向溢出。生产构建及 diff 检查通过，裁边代码移除。
+
+截图：`portfolio-book-new-original-presentation.png`、`portfolio-book-new-original-cover.png`。
