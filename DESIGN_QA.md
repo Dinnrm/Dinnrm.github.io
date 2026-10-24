@@ -283,3 +283,10 @@
 - 五项导航测试与生产构建通过；197 模块。响应式验证使用桌面浏览器，未在物理 iOS 设备验证。
 
 截图：`portfolio-book-new-presentation.png`、`portfolio-book-cover-spread-square.png`、`portfolio-contact-light-email.png`。
+
+### 2026-10-24 书籍效果图放大、封面展开尺寸校准
+
+- 仅首图采用 CSS 取景裁边，三个书体完整、保留原投影；桌面展示宽960px。封面展开与第三张效果图同宽：1280px 视口均546px，390px 均280px，768px 均306.5px，320px 均约236.72px。展开图自然比例展示，无额外灰条。
+- 四个尺寸均保留20张图片、无横向溢出；其他原图和列表预览未改动，控制台无警告或错误。生产构建及 diff 检查通过，无新增依赖。
+
+截图：`portfolio-book-trimmed-presentation.png`。
