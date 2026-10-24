@@ -21,8 +21,8 @@ export function usePreferences() {
     document.documentElement.lang = lang === 'en' ? 'en' : 'zh-CN'
     document.title = lang === 'en' ? 'Dinnrm — Ding Ruomu · Visual Designer' : 'Dinnrm — 丁若木 · 个人设计作品集'
     document.querySelector('meta[name="description"]').content = lang === 'en'
-      ? 'Ding Ruomu’s portfolio: visual communication, brand identity, poster design, book design and photography.'
-      : '丁若木的个人设计作品集，涵盖视觉传达、品牌设计、海报设计、书籍装帧与摄影。'
+      ? 'Ding Ruomu’s portfolio: visual communication, brand identity, poster design, book design.'
+      : '丁若木的个人设计作品集，涵盖视觉传达、品牌设计、海报设计、书籍装帧。'
   }, [lang])
 
   useEffect(() => {

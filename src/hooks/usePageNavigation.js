@@ -1,7 +1,7 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { projects } from '../data/content.js'
 
-export const NAV_PAGES = ['home', 'education', 'awards', 'works', 'photos', 'contact']
+export const NAV_PAGES = ['home', 'education', 'awards', 'works', 'contact']
 export const ALL_PAGES = NAV_PAGES
 export const CONTINUOUS_PAGES = NAV_PAGES
 export const DESKTOP_QUERY = '(min-width: 1100px) and (hover: hover) and (pointer: fine)'

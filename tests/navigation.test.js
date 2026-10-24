@@ -19,6 +19,8 @@ test('old section links and the merged projects link remain valid', () => {
 test('an unavailable work returns to the collection; unknown sections return home', () => {
   assert.equal(pageFromHash('#/works/missing-work'), 'works')
   assert.equal(pageFromHash('#/unknown'), 'home')
+  assert.equal(pageFromHash('#/photos'), 'home')
+  assert.equal(pageFromHash('#photos'), 'home')
   assert.equal(pageFromHash(''), 'home')
 })
 
@@ -26,7 +28,7 @@ test('touch-capable devices keep continuous navigation even with a fine pointer'
   assert.equal(shouldUseIndividualPages(true, 5), false)
   assert.equal(shouldUseIndividualPages(true, 0), true)
   assert.equal(shouldUseIndividualPages(false, 0), false)
-  assert.deepEqual(CONTINUOUS_PAGES, ['home', 'education', 'awards', 'works', 'photos', 'contact'])
+  assert.deepEqual(CONTINUOUS_PAGES, ['home', 'education', 'awards', 'works', 'contact'])
 })
 
 

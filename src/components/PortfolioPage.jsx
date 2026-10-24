@@ -1,4 +1,4 @@
-import { profile, awards, photos } from '../data/content.js'
+import { profile, awards } from '../data/content.js'
 import { copy, englishContent } from '../data/translations.js'
 import Icon from './Icon.jsx'
 import DesignCollection from './DesignCollection.jsx'
@@ -38,15 +38,6 @@ export default function PortfolioPage({ view, lang, filter, setFilter, navigate 
       )
     case 'works':
       return <DesignCollection lang={lang} filter={filter} setFilter={setFilter} navigate={navigate} />
-    case 'photos':
-      return (
-        <section id="photos" className="content-section photography-section" aria-labelledby="photos-title">
-          <div className="section-shell">
-            <SectionHeading label="Through the lens" title={<span id="photos-title">{t.photosTitle}</span>}><p className="section-note">{t.photoDescription}</p></SectionHeading>
-            <div className="photo-categories">{photos.map((photo, index) => <article className="photo-category motion-item" style={{ '--order': index }} key={photo.title}><span className="photo-index">0{index + 1}</span><div><p className="photo-english">{index === 0 ? 'Portrait' : 'Landscape'}</p><h3>{en ? englishContent.photos[index] : photo.title}</h3></div><span className="photo-category-label">{t.photoCategory}</span></article>)}</div>
-          </div>
-        </section>
-      )
     case 'education':
       return (
         <section id="education" className="content-section section-shell education-section" aria-labelledby="education-title">

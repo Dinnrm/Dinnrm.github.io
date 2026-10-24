@@ -94,9 +94,3 @@ export const designWorks = [
   { id: 'book', title: '书籍装帧设计', titleEn: 'Book design' },
   { id: 'other', title: '其他设计', titleEn: 'Other design' },
 ]
-
-// 摄影作品分类
-export const photos = [
-  { title: '人像摄影', c1: '#2b2b2e', c2: '#6d6d73' },
-  { title: '风景摄影', c1: '#1f3a5f', c2: '#7fa8d6' },
-]
