@@ -1,3 +1,5 @@
+import shen_cover_320 from '../assets/projects/shen-cover-320.webp'
+import shen_cover_960 from '../assets/projects/shen-cover-960.webp'
 import yixin_identity_320 from '../assets/projects/yixin-identity-320.webp'
 import yixin_identity_960 from '../assets/projects/yixin-identity-960.webp'
 import yixin_construction_320 from '../assets/projects/yixin-construction-320.webp'
@@ -159,6 +161,7 @@ import kunlun_print_320 from '../assets/projects/kunlun-print-320.webp'
 import kunlun_print_960 from '../assets/projects/kunlun-print-960.webp'
 
 export const projectImages = {
+  'shen-cover': { caption: '《慎》系列海报效果展示', captionEn: 'Shen poster series presentation', width: 4000, height: 3000, thumb: shen_cover_320, medium: shen_cover_960 },
   'yixin-identity': { caption: "品牌主标志", captionEn: "Primary brand identity", width: 1040, height: 388, thumb: yixin_identity_320, medium: yixin_identity_960 },
   'yixin-construction': { caption: "标志标准制图", captionEn: "Logo construction grid", width: 1326, height: 640, thumb: yixin_construction_320, medium: yixin_construction_960 },
   'yixin-inspiration': { caption: "双心、人形与暖阳意象", captionEn: "Hearts, human gesture and warm light", width: 1416, height: 369, thumb: yixin_inspiration_320, medium: yixin_inspiration_960 },

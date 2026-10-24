@@ -45,7 +45,7 @@ export const projects = [
     id: 'shen', tag: '海报设计', tagEn: 'Poster series', title: '《慎》系列海报设计', titleEn: '“Shen” · Caution poster series',
     desc: '作品《慎》系列海报设计以铁丝为灵感，结合照片传播、文件传播、语言传播三种经典传播方式，将铁丝编织成浅显易懂的对应图形，以直观的形态告诉大家“守密护己筑防线，国安家安记心间”。',
     descEn: 'Inspired by wire, this series explores three familiar forms of communication: photographs, files and speech. Wire is shaped into recognizable symbols to convey a message of protecting confidentiality, personal safety, and the security of both nation and home.',
-    categories: ['poster'], images: ['shen-photo', 'shen-file', 'shen-speech'],
+    categories: ['poster'], coverImages: ['shen-cover'], images: ['shen-cover', 'shen-photo', 'shen-file', 'shen-speech'],
   },
   {
     id: 'flowers-visual', coverTitle: '花儿永远这样红', coverTitleEn: 'The Flowers Are Always So Red', listingTitle: '《花儿永远这样红》主视觉设计', listingTitleEn: 'The Flowers Are Always So Red · Key visual', tag: '演出视觉', tagEn: 'Performance',

@@ -308,3 +308,7 @@
 - 五项导航测试与生产构建通过，作品集拆成延迟加载的 App chunk；源码只保存密码摘要。此检查验证界面门禁，不代表公开静态资源具有服务器权限保护。
 
 截图：`portfolio-password-entry.png`、`portfolio-password-error.png`。
+
+### 2026-10-24 《慎》系列新增封面
+
+列表确认只展示一张新效果图，计数4张，点击进入详情；详情顺序为新封面01／04、慎拍02／04、慎传03／04、慎言04／04。390px无横向溢出、四张保留、draggable=false，控制台无警告或错误。生产构建与diff检查通过。截图：`portfolio-shen-new-cover.png`。
