@@ -10,7 +10,7 @@ export default function ProjectCaseStudy({ project, lang }) {
     const index = project.images.indexOf(key)
     const caption = en ? image.captionEn : image.caption
     const sizes = image.edgeToEdge ? '(max-width: 767px) calc(100vw - 56px), (max-width: 1232px) calc(100vw - 112px), 1120px' : lead ? '(max-width: 767px) 280px, (max-width: 1099px) calc(100vw - 112px), 960px' : reading ? '(max-width: 767px) 280px, (max-width: 1099px) 400px, 360px' : '(max-width: 767px) 280px, (max-width: 1099px) 400px, 520px'
-    return <figure className={'project-artwork book-artwork' + (lead ? ' is-lead' : '') + (image.naturalRatio ? ' is-natural-ratio' : '') + (image.edgeToEdge ? ' is-edge-to-edge' : '')} key={key} data-protected-image>
+    return <figure className={'project-artwork book-artwork' + (lead ? ' is-lead' : '') + (image.naturalRatio ? ' is-natural-ratio' : '') + (image.edgeToEdge ? ' is-edge-to-edge' : '') + (image.whiteSurface ? ' is-white-surface' : '')} key={key} data-protected-image>
       <div className="project-artwork-surface"><img src={image.medium} srcSet={`${image.thumb} 320w, ${image.medium} 960w`} sizes={sizes} width={image.width} height={image.height} alt={`${title} · ${caption}`} draggable="false" loading={index === 0 ? 'eager' : 'lazy'} decoding="async" /></div>
       <figcaption><span>{caption}</span><span>{String(index + 1).padStart(2, '0')} / {project.images.length}</span></figcaption>
       {image.note && <p className="artwork-note">{en ? image.noteEn : image.note}</p>}

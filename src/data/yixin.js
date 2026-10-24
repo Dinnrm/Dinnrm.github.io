@@ -7,10 +7,10 @@ export const yixinCaseStudy = {
   ],
   sections: [
     {
-      id: 'identity', title: '品牌识别', titleEn: 'Brand identity', leadImage: 'yixin-identity',
-      text: '以“艺心为民”为核心，将红橙双心与舒展的人形融为一体，传递艺术的温度、包容与关怀。结合泉城地域意象建立标准制图、辅助标志和反白应用，让公共文化服务在不同场景中保持统一、亲和的识别。',
-      textEn: 'Red-orange hearts and an open human gesture express the warmth, inclusiveness and care of public arts services. Drawing on Jinan’s local identity, the construction grid, secondary marks and reversed versions create a consistent, approachable system across different settings.',
-      images: ['yixin-identity', 'yixin-construction', 'yixin-inspiration', 'yixin-secondary', 'yixin-lockups'],
+      id: 'identity', title: '品牌识别', titleEn: 'Brand identity', leadImage: 'yixin-identity', wideImages: ['yixin-lockups'],
+      text: '以“艺心为民”为核心，将红橙双心与舒展的人形融为一体，传递艺术的温度、包容与关怀。结合泉城地域意象建立标准制图、标准色彩、辅助标志和反白应用，让公共文化服务在不同场景中保持统一、亲和的识别。',
+      textEn: 'Red-orange hearts and an open human gesture express the warmth, inclusiveness and care of public arts services. Drawing on Jinan’s local identity, the construction grid, color palette, secondary marks and reversed versions create a consistent, approachable system across different settings.',
+      images: ['yixin-identity', 'yixin-construction', 'yixin-inspiration', 'yixin-colors', 'yixin-secondary', 'yixin-lockups'],
     },
     {
       id: 'patterns', title: '辅助图形', titleEn: 'Graphic language', columns: 3,
