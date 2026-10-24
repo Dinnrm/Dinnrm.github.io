@@ -1,5 +1,6 @@
 // 站点内容（来自 个人介绍.docx）。修改只动这里。
 import { flowersBookDetails } from './flowersBook.js'
+import { yixinCaseStudy } from './yixin.js'
 
 export const profile = {
   name: '丁若木',
@@ -69,7 +70,7 @@ export const projects = [
     title: '济南市文化馆“家门口的文化馆——‘艺’心为民”视觉系统设计', titleEn: 'Jinan Cultural Center · “A Cultural Center at Your Doorstep — Yixin Weimin”',
     desc: "为济南市文化馆“家门口的文化馆——艺心为民”项目设计统一的视觉系统。以红橙渐变爱心与白色人形传递艺术的温度及服务大众的理念，结合泉城地域意象，塑造温暖、亲和的品牌形象，并延展至服装、文创、导视和宣传物料，让公共文化服务贴近社区生活。",
     descEn: "A visual identity for the Jinan Cultural Center’s “A Cultural Center at Your Doorstep — Yixin Weimin” program. A red-to-orange heart and a simple white figure convey warmth and art’s connection with the public. Drawing on local imagery, the approachable identity extends to clothing, merchandise, wayfinding and publicity materials, bringing cultural services closer to community life.",
-    categories: ['brand'], images: ['yixin-1', 'yixin-2', 'yixin-3', 'yixin-4', 'yixin-5'],
+    categories: ['brand'], caseStudy: yixinCaseStudy, coverImages: ['yixin-identity'], images: yixinCaseStudy.sections.flatMap(section => section.images),
   },
   {
     id: 'flowers-book', coverTitle: '花儿永远这样红', coverTitleEn: 'The Flowers Are Always So Red', tag: '书籍装帧', tagEn: 'Book design', title: '《花儿永远这样红》书籍装帧设计', titleEn: '“The Flowers Are Always So Red” · Book design',

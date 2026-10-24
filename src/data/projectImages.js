@@ -1,3 +1,68 @@
+import yixin_identity_320 from '../assets/projects/yixin-identity-320.webp'
+import yixin_identity_960 from '../assets/projects/yixin-identity-960.webp'
+import yixin_construction_320 from '../assets/projects/yixin-construction-320.webp'
+import yixin_construction_960 from '../assets/projects/yixin-construction-960.webp'
+import yixin_inspiration_320 from '../assets/projects/yixin-inspiration-320.webp'
+import yixin_inspiration_960 from '../assets/projects/yixin-inspiration-960.webp'
+import yixin_secondary_320 from '../assets/projects/yixin-secondary-320.webp'
+import yixin_secondary_960 from '../assets/projects/yixin-secondary-960.webp'
+import yixin_lockups_320 from '../assets/projects/yixin-lockups-320.webp'
+import yixin_lockups_960 from '../assets/projects/yixin-lockups-960.webp'
+import yixin_pattern_hearts_320 from '../assets/projects/yixin-pattern-hearts-320.webp'
+import yixin_pattern_hearts_960 from '../assets/projects/yixin-pattern-hearts-960.webp'
+import yixin_pattern_geometry_320 from '../assets/projects/yixin-pattern-geometry-320.webp'
+import yixin_pattern_geometry_960 from '../assets/projects/yixin-pattern-geometry-960.webp'
+import yixin_pattern_lines_320 from '../assets/projects/yixin-pattern-lines-320.webp'
+import yixin_pattern_lines_960 from '../assets/projects/yixin-pattern-lines-960.webp'
+import yixin_cap_320 from '../assets/projects/yixin-cap-320.webp'
+import yixin_cap_960 from '../assets/projects/yixin-cap-960.webp'
+import yixin_badge_320 from '../assets/projects/yixin-badge-320.webp'
+import yixin_badge_960 from '../assets/projects/yixin-badge-960.webp'
+import yixin_polo_320 from '../assets/projects/yixin-polo-320.webp'
+import yixin_polo_960 from '../assets/projects/yixin-polo-960.webp'
+import yixin_vest_320 from '../assets/projects/yixin-vest-320.webp'
+import yixin_vest_960 from '../assets/projects/yixin-vest-960.webp'
+import yixin_stationery_320 from '../assets/projects/yixin-stationery-320.webp'
+import yixin_stationery_960 from '../assets/projects/yixin-stationery-960.webp'
+import yixin_pass_320 from '../assets/projects/yixin-pass-320.webp'
+import yixin_pass_960 from '../assets/projects/yixin-pass-960.webp'
+import yixin_tote_320 from '../assets/projects/yixin-tote-320.webp'
+import yixin_tote_960 from '../assets/projects/yixin-tote-960.webp'
+import yixin_paper_goods_320 from '../assets/projects/yixin-paper-goods-320.webp'
+import yixin_paper_goods_960 from '../assets/projects/yixin-paper-goods-960.webp'
+import yixin_wayfinding_320 from '../assets/projects/yixin-wayfinding-320.webp'
+import yixin_wayfinding_960 from '../assets/projects/yixin-wayfinding-960.webp'
+import yixin_storefront_320 from '../assets/projects/yixin-storefront-320.webp'
+import yixin_storefront_960 from '../assets/projects/yixin-storefront-960.webp'
+import yixin_site_facade_320 from '../assets/projects/yixin-site-facade-320.webp'
+import yixin_site_facade_960 from '../assets/projects/yixin-site-facade-960.webp'
+import yixin_site_meeting_320 from '../assets/projects/yixin-site-meeting-320.webp'
+import yixin_site_meeting_960 from '../assets/projects/yixin-site-meeting-960.webp'
+import yixin_site_reception_320 from '../assets/projects/yixin-site-reception-320.webp'
+import yixin_site_reception_960 from '../assets/projects/yixin-site-reception-960.webp'
+import yixin_site_merchandise_320 from '../assets/projects/yixin-site-merchandise-320.webp'
+import yixin_site_merchandise_960 from '../assets/projects/yixin-site-merchandise-960.webp'
+import yixin_site_class_320 from '../assets/projects/yixin-site-class-320.webp'
+import yixin_site_class_960 from '../assets/projects/yixin-site-class-960.webp'
+import yixin_site_vest_320 from '../assets/projects/yixin-site-vest-320.webp'
+import yixin_site_vest_960 from '../assets/projects/yixin-site-vest-960.webp'
+import yixin_site_badge_320 from '../assets/projects/yixin-site-badge-320.webp'
+import yixin_site_badge_960 from '../assets/projects/yixin-site-badge-960.webp'
+import yixin_press_1_320 from '../assets/projects/yixin-press-1-320.webp'
+import yixin_press_1_960 from '../assets/projects/yixin-press-1-960.webp'
+import yixin_press_2_320 from '../assets/projects/yixin-press-2-320.webp'
+import yixin_press_2_960 from '../assets/projects/yixin-press-2-960.webp'
+import yixin_press_3_320 from '../assets/projects/yixin-press-3-320.webp'
+import yixin_press_3_960 from '../assets/projects/yixin-press-3-960.webp'
+import yixin_community_opera_320 from '../assets/projects/yixin-community-opera-320.webp'
+import yixin_community_opera_960 from '../assets/projects/yixin-community-opera-960.webp'
+import yixin_community_taichi_320 from '../assets/projects/yixin-community-taichi-320.webp'
+import yixin_community_taichi_960 from '../assets/projects/yixin-community-taichi-960.webp'
+import yixin_community_painting_320 from '../assets/projects/yixin-community-painting-320.webp'
+import yixin_community_painting_960 from '../assets/projects/yixin-community-painting-960.webp'
+import yixin_community_makeup_320 from '../assets/projects/yixin-community-makeup-320.webp'
+import yixin_community_makeup_960 from '../assets/projects/yixin-community-makeup-960.webp'
+
 import flowers_book_sleeve_320 from '../assets/projects/flowers-book-sleeve-320.webp'
 import flowers_book_sleeve_960 from '../assets/projects/flowers-book-sleeve-960.webp'
 import flowers_book_cover_320 from '../assets/projects/flowers-book-cover-320.webp'
@@ -54,16 +119,6 @@ import shen_file_960 from '../assets/projects/shen-file-960.webp'
 import shen_speech_320 from '../assets/projects/shen-speech-320.webp'
 import shen_speech_960 from '../assets/projects/shen-speech-960.webp'
 
-import yixin_1_320 from '../assets/projects/yixin-1-320.webp'
-import yixin_1_960 from '../assets/projects/yixin-1-960.webp'
-import yixin_2_320 from '../assets/projects/yixin-2-320.webp'
-import yixin_2_960 from '../assets/projects/yixin-2-960.webp'
-import yixin_3_320 from '../assets/projects/yixin-3-320.webp'
-import yixin_3_960 from '../assets/projects/yixin-3-960.webp'
-import yixin_4_320 from '../assets/projects/yixin-4-320.webp'
-import yixin_4_960 from '../assets/projects/yixin-4-960.webp'
-import yixin_5_320 from '../assets/projects/yixin-5-320.webp'
-import yixin_5_960 from '../assets/projects/yixin-5-960.webp'
 
 import flowers_visual_stage_320 from '../assets/projects/flowers-visual-stage-320.webp'
 import flowers_visual_stage_960 from '../assets/projects/flowers-visual-stage-960.webp'
@@ -104,6 +159,38 @@ import kunlun_print_320 from '../assets/projects/kunlun-print-320.webp'
 import kunlun_print_960 from '../assets/projects/kunlun-print-960.webp'
 
 export const projectImages = {
+  'yixin-identity': { caption: "品牌主标志", captionEn: "Primary brand identity", width: 1040, height: 388, thumb: yixin_identity_320, medium: yixin_identity_960 },
+  'yixin-construction': { caption: "标志标准制图", captionEn: "Logo construction grid", width: 1326, height: 640, thumb: yixin_construction_320, medium: yixin_construction_960 },
+  'yixin-inspiration': { caption: "双心、人形与暖阳意象", captionEn: "Hearts, human gesture and warm light", width: 1416, height: 369, thumb: yixin_inspiration_320, medium: yixin_inspiration_960 },
+  'yixin-secondary': { caption: "辅助标志", captionEn: "Secondary identity", width: 960, height: 253, thumb: yixin_secondary_320, medium: yixin_secondary_960 },
+  'yixin-lockups': { caption: "辅助标志与反白应用", captionEn: "Secondary and reversed identities", width: 961, height: 450, thumb: yixin_lockups_320, medium: yixin_lockups_960 },
+  'yixin-pattern-hearts': { caption: "双心连续纹样", captionEn: "Repeating heart pattern", width: 961, height: 633, thumb: yixin_pattern_hearts_320, medium: yixin_pattern_hearts_960 },
+  'yixin-pattern-geometry': { caption: "几何重构纹样", captionEn: "Geometric pattern", width: 961, height: 637, thumb: yixin_pattern_geometry_320, medium: yixin_pattern_geometry_960 },
+  'yixin-pattern-lines': { caption: "舒展曲线纹样", captionEn: "Flowing line pattern", width: 961, height: 633, thumb: yixin_pattern_lines_320, medium: yixin_pattern_lines_960 },
+  'yixin-cap': { caption: "棒球帽设计", captionEn: "Baseball cap", width: 1115, height: 697, note: "32 支斜纹涤棉 · 18 × 25 × 11.5 cm", noteEn: "Cotton-polyester twill · 18 × 25 × 11.5 cm", thumb: yixin_cap_320, medium: yixin_cap_960 },
+  'yixin-badge': { caption: "烤漆胸章", captionEn: "Enamel badge", width: 1110, height: 697, note: "锌合金 · 5 × 5 × 0.5 cm", noteEn: "Zinc alloy · 5 × 5 × 0.5 cm", thumb: yixin_badge_320, medium: yixin_badge_960 },
+  'yixin-polo': { caption: "POLO 文化衫", captionEn: "Polo shirt", width: 1115, height: 691, note: "32 支 65/35 涤棉斜纹面料，260 g/㎡ · 成人均码", noteEn: "65/35 cotton-polyester twill, 260 g/m² · Adult one-size", thumb: yixin_polo_320, medium: yixin_polo_960 },
+  'yixin-vest': { caption: "志愿者马甲", captionEn: "Volunteer vest", width: 1113, height: 691, note: "32 支涤棉梭织面料 · 成人均码", noteEn: "Cotton-polyester woven fabric · Adult one-size", thumb: yixin_vest_320, medium: yixin_vest_960 },
+  'yixin-stationery': { caption: "办公事务系列", captionEn: "Office stationery", width: 1115, height: 699, note: "120g 米白色特种纸，四色胶印 · A4 信纸、西式信封", noteEn: "120g ivory specialty paper, four-color offset · A4 letterhead and envelopes", thumb: yixin_stationery_320, medium: yixin_stationery_960 },
+  'yixin-pass': { caption: "工作证", captionEn: "Staff pass", width: 1113, height: 699, note: "300g 铜版纸覆哑膜，涤纶织带挂绳 · 8.5 × 5.4 cm", noteEn: "300g matte-laminated coated paper, polyester lanyard · 8.5 × 5.4 cm", thumb: yixin_pass_320, medium: yixin_pass_960 },
+  'yixin-tote': { caption: "环保帆布手提袋", captionEn: "Canvas tote bag", width: 1115, height: 699, note: "16 安加厚纯棉帆布 · 40 × 35 cm", noteEn: "Heavy cotton canvas · 40 × 35 cm", thumb: yixin_tote_320, medium: yixin_tote_960 },
+  'yixin-paper-goods': { caption: "文创纸品系列", captionEn: "Paper goods", width: 1113, height: 699, note: "白卡、食品级纸杯原纸，覆哑膜四色印刷 · 纸袋 30 × 40 cm、纸杯高 9 cm、纪念卡 10 × 10 cm", noteEn: "White card and food-grade cup paper, matte four-color printing · Bag 30 × 40 cm, cup height 9 cm, card 10 × 10 cm", thumb: yixin_paper_goods_320, medium: yixin_paper_goods_960 },
+  'yixin-wayfinding': { caption: "户外立式导视牌", captionEn: "Outdoor wayfinding sign", width: 1115, height: 893, note: "镀锌钢板，静电喷塑 · 180 × 40 × 20 cm", noteEn: "Powder-coated galvanized steel · 180 × 40 × 20 cm", thumb: yixin_wayfinding_320, medium: yixin_wayfinding_960 },
+  'yixin-storefront': { caption: "门头形象标识", captionEn: "Facade signage", width: 1113, height: 893, note: "铝单板底板、亚克力发光字 · 600 × 80 cm", noteEn: "Aluminum panel with illuminated acrylic lettering · 600 × 80 cm", thumb: yixin_storefront_320, medium: yixin_storefront_960 },
+  'yixin-site-facade': { caption: "品牌门头实景", captionEn: "Identity on the cultural center facade", width: 3044, height: 1678, thumb: yixin_site_facade_320, medium: yixin_site_facade_960 },
+  'yixin-site-meeting': { caption: "会议空间实景", captionEn: "Identity in a meeting space", width: 1456, height: 819, thumb: yixin_site_meeting_320, medium: yixin_site_meeting_960 },
+  'yixin-site-reception': { caption: "服务空间实景", captionEn: "Identity in a public service space", width: 1465, height: 823, thumb: yixin_site_reception_320, medium: yixin_site_reception_960 },
+  'yixin-site-merchandise': { caption: "服装与衍生品展示", captionEn: "Clothing and merchandise presentation", width: 1266, height: 890, thumb: yixin_site_merchandise_320, medium: yixin_site_merchandise_960 },
+  'yixin-site-class': { caption: "公益课堂中的品牌应用", captionEn: "Identity in a community class", width: 1586, height: 892, thumb: yixin_site_class_320, medium: yixin_site_class_960 },
+  'yixin-site-vest': { caption: "志愿者马甲实景", captionEn: "Volunteer vest in use", width: 1337, height: 891, thumb: yixin_site_vest_320, medium: yixin_site_vest_960 },
+  'yixin-site-badge': { caption: "胸章实景", captionEn: "Enamel badge in use", width: 1352, height: 891, thumb: yixin_site_badge_320, medium: yixin_site_badge_960 },
+  'yixin-press-1': { caption: "媒体报道 · 一", captionEn: "Press coverage · I", width: 961, height: 1411, thumb: yixin_press_1_320, medium: yixin_press_1_960 },
+  'yixin-press-2': { caption: "媒体报道 · 二", captionEn: "Press coverage · II", width: 961, height: 1399, thumb: yixin_press_2_320, medium: yixin_press_2_960 },
+  'yixin-press-3': { caption: "媒体报道 · 三", captionEn: "Press coverage · III", width: 961, height: 1477, thumb: yixin_press_3_320, medium: yixin_press_3_960 },
+  'yixin-community-opera': { caption: "吕剧课堂", captionEn: "Lü opera workshop", width: 961, height: 562, note: "普集街道桥子村：村民在家门口学习吕剧，让传统文化融入日常生活。", noteEn: "Qiaozi Village: local residents learn Lü opera close to home, bringing traditional culture into everyday life.", thumb: yixin_community_opera_320, medium: yixin_community_opera_960 },
+  'yixin-community-taichi': { caption: "乡村太极队", captionEn: "Village tai chi group", width: 961, height: 558, note: "商河县白桥镇河埃孙村：专业指导与本土骨干带练结合，推动队伍持续成长。", noteEn: "Heaisun Village: professional instruction and local peer leadership support the group’s continued growth.", thumb: yixin_community_taichi_320, medium: yixin_community_taichi_960 },
+  'yixin-community-painting': { caption: "绘画与城市采风", captionEn: "Painting and urban sketching", width: 961, height: 560, note: "槐荫区绘画班：学员以画笔记录老商埠、老街巷与济南的市井生活。", noteEn: "Huaiyin painting classes: participants document Jinan’s historic streets and everyday city life.", thumb: yixin_community_painting_320, medium: yixin_community_painting_960 },
+  'yixin-community-makeup': { caption: "社区美妆课堂", captionEn: "Community makeup workshop", width: 961, height: 565, note: "文恒社区：专业教师教授护肤与日常妆容，让课堂成为交流与建立自信的空间。", noteEn: "Wenheng Community: practical skincare and makeup classes create a space for confidence and social connection.", thumb: yixin_community_makeup_320, medium: yixin_community_makeup_960 },
   'flowers-book-sleeve': { caption: '双层封套与镂空装帧', captionEn: 'Two-layer sleeve and die-cut construction', width: 3297, height: 1139, thumb: flowers_book_sleeve_320, medium: flowers_book_sleeve_960 },
   'flowers-book-cover': { caption: '封面与封底展开', captionEn: 'Front and back cover', width: 1004, height: 638, thumb: flowers_book_cover_320, medium: flowers_book_cover_960 },
   'flowers-book-cover-mockup-1': { caption: '封面与封底效果', captionEn: 'Front and back cover mockup', width: 1036, height: 691, thumb: flowers_book_cover_mockup_1_320, medium: flowers_book_cover_mockup_1_960 },
@@ -142,11 +229,6 @@ export const projectImages = {
   'flowers-visual-staff': { caption: '工作证设计', captionEn: 'Staff pass design', width: 4000, height: 2670, thumb: flowers_visual_staff_320, medium: flowers_visual_staff_960 },
   'flowers-visual-cast': { caption: '演员证设计', captionEn: 'Cast pass design', width: 4000, height: 2670, thumb: flowers_visual_cast_320, medium: flowers_visual_cast_960 },
   'flowers-visual-print': { caption: '节目单与证件实物记录', captionEn: 'Printed program and passes', width: 3024, height: 4032, thumb: flowers_visual_print_320, medium: flowers_visual_print_960, gallerySpan: 'full' },
-  'yixin-1': { caption: '项目源起', captionEn: 'Project background', width: 3368, height: 4763, thumb: yixin_1_320, medium: yixin_1_960 },
-  'yixin-2': { caption: '基础视觉系统与衍生品', captionEn: 'Core identity and merchandise', width: 3369, height: 4763, thumb: yixin_2_320, medium: yixin_2_960 },
-  'yixin-3': { caption: '应用系统与导视标识', captionEn: 'Applications and wayfinding', width: 3368, height: 4763, thumb: yixin_3_320, medium: yixin_3_960 },
-  'yixin-4': { caption: '标志与衍生品实景应用', captionEn: 'Identity and merchandise in use', width: 3369, height: 4763, thumb: yixin_4_320, medium: yixin_4_960 },
-  'yixin-5': { caption: '衍生品应用与社会反馈', captionEn: 'Merchandise and social response', width: 3368, height: 4763, thumb: yixin_5_320, medium: yixin_5_960 },
   'shoumo-brush': { caption: '湖笔', captionEn: 'Huzhou brush', width: 3368, height: 4763, thumb: shoumo_brush_320, medium: shoumo_brush_960 },
   'shoumo-ink': { caption: '徽墨', captionEn: 'Huizhou ink', width: 3368, height: 4763, thumb: shoumo_ink_320, medium: shoumo_ink_960 },
   'shoumo-paper': { caption: '宣纸', captionEn: 'Xuan paper', width: 3368, height: 4763, thumb: shoumo_paper_320, medium: shoumo_paper_960 },

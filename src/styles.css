@@ -423,6 +423,9 @@ img { -webkit-user-drag: none; -webkit-touch-callout: none; user-select: none; }
 .book-artwork.is-lead .project-artwork-surface img { height: auto; }
 .book-artwork figcaption { font-size: 11px; gap: 12px; }
 .book-artwork figcaption > span:last-child { white-space: nowrap; flex: none; }
+.artwork-note { margin-top: 9px; max-width: 65ch; font-size: 11px; line-height: 1.8; color: var(--muted); }
+.identity-case-study .book-project-hero { width: min(900px, 100%); margin-inline: auto; }
+.identity-case-study .is-media .project-artwork-surface { aspect-ratio: 3 / 4; }
 @media (max-width: 1099px) and (min-width: 768px) {
   .work-cover { --cover-inset: 28px; }
   .cover-name { font-size: 28px; }
@@ -462,6 +465,7 @@ img { -webkit-user-drag: none; -webkit-touch-callout: none; user-select: none; }
   .book-gallery-section + .book-gallery-section { margin-top: 40px; }
   .book-artwork-grid, .book-artwork-grid.is-reading { grid-template-columns: minmax(0, 1fr); width: min(280px, 88%); margin-inline: auto; gap: 26px; }
   .book-project-hero { width: min(280px, 88%); margin: 28px auto 0; }
+  .identity-case-study .book-project-hero { width: min(280px, 88%); }
 }
 @media (prefers-reduced-motion: reduce) {
   .work-preview-link:hover .work-cover-artworks, .work-preview-link:hover .work-card-arrow { transform: none; }

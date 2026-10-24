@@ -134,10 +134,16 @@ HEIC 转换仅在本地进行；现场照由 Display P3 转为 sRGB，样机透�
 
 ## 2026-10-24 当前维护状态：书籍 PSD 拆图
 
-`flowers-book` 采用 `bookDetails` 分组内容，由 `BookProjectDetails.jsx` 渲染。原四个展板 WebP 与两个映射已移除，替换为 20 张内容图、40 个 320／960px WebP。首图为封套，集合小预览按最新要求使用详情第三张 `flowers-book-cover-mockup-1` 原图；`project.images` 从 `flowersBookDetails.sections` 按阅读顺序生成，计数与路由保持统一。
+`flowers-book` 采用 `bookDetails` 分组内容，由 `ProjectCaseStudy.jsx` 渲染。原四个展板 WebP 与两个映射已移除，替换为 20 张内容图、40 个 320／960px WebP。首图为封套，集合小预览按最新要求使用详情第三张 `flowers-book-cover-mockup-1` 原图；`project.images` 从 `flowersBookDetails.sections` 按阅读顺序生成，计数与路由保持统一。
 
 `flowersBook.js` 保存六项书籍信息和三个图文分区；总说明仍为一段，直接读取的 PSD 正文原文及图片提取图层边界见 SOURCES.md。桌面网格二／三列，平板双列，手机单列限宽，原图片保护逻辑继续生效。当前八项作品五十张图片，末两项仍为祝农丰和山东艺术学院基建。
 
 当前按最新要求，全部详情图片使用保留背景与投影的原 WebP 展示版，不再去背景。二十六个轮廓 SVG 及其生成脚本已移除，网页预览框与详情容器的灰底继续保留。后续不要恢复去背景处理，除非用户明确要求。
 
 内页编排六张图的容器采用直角与轻微双层 box-shadow，通过 `.book-gallery-section.is-layouts` 限定；这是网页展示效果，不修改原图。其他分区与第三张原图预览保持。
+
+## 2026-10-24 当前维护状态：艺心为民 AI 图文重排
+
+`yixin` 的旧五张展板与十个 WebP 已删除，替换为三十二张独立内容图、六十四个 WebP。主标志 `yixin-identity` 为首图与列表封面，品牌类别、稳定路由与一段式总说明保持。新增 `yixin.js` 保存三项项目资料和六个分区；应用材质／尺寸及社区说明保存在 `projectImages.js` 的 `note`／`noteEn`。提取边界与文字整理依据见素材 SOURCES.md。
+
+案例组件从 `BookProjectDetails` 改为共享的 `ProjectCaseStudy`，兼容原 `bookDetails` 与新增 `caseStudy`。分区可指定三列或全宽图片，媒体区使用竖向比例。书籍原图、第三张预览、内页直角与轻微阴影仍保持；不要因共享组件恢复去背景。当前八项作品七十七张图片，两项待补图、一项待补说明，品牌分类仍只有艺心为民和祝农丰。
