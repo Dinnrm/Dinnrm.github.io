@@ -325,3 +325,7 @@
 - 五项导航测试、生产构建及diff检查通过，无新增依赖；控制台无警告或错误。响应式验证使用桌面浏览器，未在物理iOS设备测试。
 
 截图：`portfolio-yixin-grid-and-inspiration-notes.png`、`portfolio-yixin-palette-and-secondary.png`、`portfolio-yixin-reversed-applications.png`。
+
+### 2026-10-24 艺心为民去灰条与浅阴影
+
+桌面及768／390／320px检查33张图片：容器与图片高度差均不超过1px，33处均有轻微阴影、直角，未裁图、无横向溢出。浏览器目视核对棒球帽与胸章，不再有上下灰条，原图光影保留。控制台无警告或错误；生产构建及diff检查通过。样式仅限定艺心为民案例。截图：`portfolio-yixin-no-bars-soft-shadow.png`。
