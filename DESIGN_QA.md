@@ -274,3 +274,12 @@
 - 检查使用桌面浏览器响应式尺寸，未在物理 iOS 设备验证。源展板中的服务数量在网页中明确归于项目资料，未另行核实，也未作为个人设计业绩。
 
 截图：`portfolio-yixin-ai-intro.png`、`portfolio-yixin-ai-applications.png`、`portfolio-yixin-ai-mobile.png`。
+
+## 2026-10-24 书籍图片细节与联系更新（当前版本）
+
+- 新书籍首图完整展示，图注为“书籍效果展示图”；第二张为“封面和封底展开图”。只有第二张 naturalRatio，1440／768／390／320px 下图片与容器高度一致，无额外上下灰条。书籍仍二十张，列表仍用第三张原图。
+- 桌面八个作品预览及艺心为民三十二个详情容器均为直角；书籍与昆仑详情亦保持直角。原图背景、投影及内页轻微阴影保留。无新增依赖。
+- 浏览器确认列表显示“昆仑瑶·数字文旅与AIGC大赛主视觉设计”。联系显示新邮箱和对应 mailto，无待更新提示；1440／768／390px 无横向溢出。深色主题下联系区仍为 rgb(245,245,242)，文字 rgb(34,35,33)。390px 菜单点击联系后标题顶端约 87px，导航底端 73px。
+- 五项导航测试与生产构建通过；197 模块。响应式验证使用桌面浏览器，未在物理 iOS 设备验证。
+
+截图：`portfolio-book-new-presentation.png`、`portfolio-book-cover-spread-square.png`、`portfolio-contact-light-email.png`。

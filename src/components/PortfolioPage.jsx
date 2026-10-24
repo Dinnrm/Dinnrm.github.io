@@ -70,7 +70,7 @@ export default function PortfolioPage({ view, lang, filter, setFilter, navigate 
       )
     case 'contact':
       return (
-        <section id="contact" className="contact-section" aria-labelledby="contact-title"><div className="section-shell contact-inner"><p className="section-label">Get in touch</p><h2 id="contact-title">{t.contactTitle}<span className="name-dot">.</span></h2><div className="contact-bottom"><div><a className="contact-email" href="mailto:hello@example.com">hello@example.com<Icon /></a><p className="contact-note">{t.emailPending}</p></div><a className="text-link" href="https://github.com/Dinnrm" target="_blank" rel="noopener noreferrer">GitHub / Dinnrm<Icon /></a></div></div></section>
+        <section id="contact" className="contact-section" aria-labelledby="contact-title"><div className="section-shell contact-inner"><p className="section-label">Get in touch</p><h2 id="contact-title">{t.contactTitle}<span className="name-dot">.</span></h2><div className="contact-bottom"><div><a className="contact-email" href="mailto:2906282327@qq.com">2906282327@qq.com<Icon /></a></div><a className="text-link" href="https://github.com/Dinnrm" target="_blank" rel="noopener noreferrer">GitHub / Dinnrm<Icon /></a></div></div></section>
       )
     default:
       return null

@@ -10,7 +10,7 @@ export const copy = {
     educationTitle: '教育经历', school: '山东艺术学院', bachelor: '本科', master: '硕士在读', bachelorMajor: '视觉传达设计专业', masterMajor: '视觉传达设计（传统文化传承与创新方向）', tools: '常用软件',
     awardsTitle: '竞赛获奖', awardsDescription: '设计竞赛中的创作与探索。',
     campusAlt: '山东艺术学院校园建筑航拍', campusCredit: '图片来源：学校官网', emblemAlt: '山东艺术学院校徽',
-    contactTitle: '期待合作', emailPending: '联系邮箱待更新', backTop: '返回主页', source: '网站源码',
+    contactTitle: '期待合作', backTop: '返回主页', source: '网站源码',
   },
   en: {
     nav: { home: 'Home', projects: 'Projects', works: 'Design', photos: 'Photos', education: 'Education', awards: 'Awards', contact: 'Contact' },
@@ -23,7 +23,7 @@ export const copy = {
     educationTitle: 'Education', school: 'Shandong University of Arts', bachelor: 'Bachelor’s', master: 'Master’s · In progress', bachelorMajor: 'Visual Communication Design', masterMajor: 'Visual Communication Design (Traditional Culture: Heritage and Innovation)', tools: 'Design toolkit',
     awardsTitle: 'Awards', awardsDescription: 'Creative exploration through design competitions.',
     campusAlt: 'Aerial view of the Shandong University of Arts campus', campusCredit: 'Photo: university website', emblemAlt: 'Shandong University of Arts emblem',
-    contactTitle: 'Get in touch', emailPending: 'Contact email to be updated', backTop: 'Back to home', source: 'Site source',
+    contactTitle: 'Get in touch', backTop: 'Back to home', source: 'Site source',
   },
 }
 

@@ -146,12 +146,11 @@ h2 { font-family: var(--sans); font-size: clamp(28px, 3.2vw, 44px); font-weight:
 .award-row p { font-size: 13px; line-height: 1.85; }
 
 /* A clear, quiet ending. */
-.contact-section { --ink: #eeeee6; --muted: #b0b3a9; --line: #43463f; --accent: #ed9c83; background: #151714; color: var(--ink); padding-block: 90px; }
+.contact-section { color-scheme: light; --ink: #222321; --muted: #666862; --line: #dedfda; --accent: #a43d2c; background: #f5f5f2; color: var(--ink); padding-block: 90px; }
 .contact-section .contact-inner h2 { font-size: clamp(36px, 7vw, 100px); line-height: 1.25; font-weight: 500; letter-spacing: -.055em; }
 .contact-bottom { margin-top: 38px; display: flex; justify-content: space-between; align-items: end; gap: 24px; }
 .contact-email { display: inline-flex; align-items: center; gap: 24px; font-family: var(--sans); font-size: clamp(20px, 2.7vw, 34px); letter-spacing: -.02em; border-bottom: 1px solid var(--ink); padding-bottom: 8px; }
 .contact-email svg { width: 22px; height: 22px; }
-.contact-note { font-size: 10px; color: var(--muted); margin-top: 12px; }
 .site-footer { display: flex; align-items: center; flex-wrap: wrap; gap: 20px; padding-block: 30px; font-size: 10px; color: var(--muted); }
 .footer-divider { margin-inline: 8px; color: var(--line); }
 :root[lang='en'] .hero h1 { font-family: var(--sans); font-weight: 650; font-size: clamp(62px, 6.7vw, 94px); letter-spacing: -.06em; }
@@ -343,8 +342,8 @@ img { -webkit-user-drag: none; -webkit-touch-callout: none; user-select: none; }
 .work-index-heading { align-items: start; margin-bottom: 44px; }
 .work-card-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 44px 28px; }
 .work-preview-card { min-width: 0; }
-.work-preview-link { display: block; height: 100%; border-radius: 4px; }
-.work-cover { --cover-inset: 34px; aspect-ratio: 16 / 10; position: relative; padding: 0; background: var(--surface); border-radius: 4px; overflow: hidden; }
+.work-preview-link { display: block; height: 100%; border-radius: 0; }
+.work-cover { --cover-inset: 34px; aspect-ratio: 16 / 10; position: relative; padding: 0; background: var(--surface); border-radius: 0; overflow: hidden; }
 .work-cover-artworks { position: absolute; inset: var(--cover-inset); display: grid; grid-template-columns: repeat(var(--preview-count), minmax(0, 1fr)); gap: 20px; transition: transform .5s var(--ease); }
 .work-cover-artworks img { width: 100%; height: 100%; min-width: 0; min-height: 0; object-fit: contain; }
 .work-cover-marker { position: absolute; top: 12px; left: 16px; font-size: 10px; color: var(--muted); }
@@ -384,7 +383,7 @@ img { -webkit-user-drag: none; -webkit-touch-callout: none; user-select: none; }
 .project-section-title::before { content: ''; width: 28px; height: 1px; background: var(--line); flex: none; align-self: center; }
 .project-artwork-block { margin-top: 40px; }
 .project-artwork-list { width: min(680px, 100%); margin: 0; display: grid; gap: 36px; }
-.project-artwork-surface { padding: clamp(16px, 3vw, 40px); background: var(--surface); border-radius: 4px; }
+.project-artwork-surface { padding: clamp(16px, 3vw, 40px); background: var(--surface); border-radius: 0; }
 .project-artwork-surface img { width: 100%; height: auto; max-height: 70vh; max-height: 68svh; object-fit: contain; }
 .project-artwork figcaption { display: flex; justify-content: space-between; gap: 20px; font-size: 12px; color: var(--muted); padding: 12px 2px 0; }
 .project-images-pending { padding-block: 12px 48px; color: var(--muted); font-size: 13px; }
@@ -421,6 +420,8 @@ img { -webkit-user-drag: none; -webkit-touch-callout: none; user-select: none; }
 .book-artwork:not(.is-lead) .project-artwork-surface { aspect-ratio: 3 / 2; display: grid; place-items: center; }
 .book-artwork .project-artwork-surface img { width: 100%; height: 100%; max-height: 520px; object-fit: contain; }
 .book-artwork.is-lead .project-artwork-surface img { height: auto; }
+.book-artwork.is-natural-ratio .project-artwork-surface { aspect-ratio: auto; display: block; }
+.book-artwork.is-natural-ratio .project-artwork-surface img { height: auto; }
 .book-artwork figcaption { font-size: 11px; gap: 12px; }
 .book-artwork figcaption > span:last-child { white-space: nowrap; flex: none; }
 .artwork-note { margin-top: 9px; max-width: 65ch; font-size: 11px; line-height: 1.8; color: var(--muted); }

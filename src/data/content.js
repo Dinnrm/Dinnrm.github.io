@@ -56,7 +56,7 @@ export const projects = [
     images: ['flowers-visual-stage', 'flowers-visual-key', 'flowers-visual-program-1', 'flowers-visual-program-2', 'flowers-visual-staff', 'flowers-visual-cast', 'flowers-visual-print'],
   },
   {
-    id: 'kunlun', coverTitle: '昆仑谣', coverTitleEn: 'Kunlun Yao', listingTitle: '昆仑谣 · 数字文旅与 AIGC 大赛', listingTitleEn: 'Kunlun Yao · Digital tourism & AIGC', tag: '赛事视觉', tagEn: 'Competition',
+    id: 'kunlun', coverTitle: '昆仑谣', coverTitleEn: 'Kunlun Yao', listingTitle: '昆仑瑶·数字文旅与AIGC大赛主视觉设计', listingTitleEn: 'Kunlun Yao · Digital tourism & AIGC competition key visual design', tag: '赛事视觉', tagEn: 'Competition',
     title: '第19届全国3D大赛“昆仑谣·数字文旅创作大赛”暨2026AIGC多模态创新设计与技术应用大赛（山东赛区）视觉系统设计',
     titleEn: '19th National 3D Competition · Kunlun Yao Digital Cultural Tourism Creation Competition & 2026 AIGC Multimodal Innovation Design and Technology Application Competition (Shandong)',
     desc: '为“昆仑谣·数字文旅创作大赛”暨 2026 AIGC 多模态创新设计与技术应用大赛山东赛区构建统一视觉系统。以蓝紫渐变、数字空间与流动点阵营造科技感，结合立体 AIGC 字形强化赛事识别，并延展至会场大屏、户外展架、签到处、演讲台及会议手册，在空间导视与纸面阅读之间保持清晰、连贯的视觉体验。',
