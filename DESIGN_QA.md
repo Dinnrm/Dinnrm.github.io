@@ -365,3 +365,7 @@
 - 构建、五项导航测试与diff检查通过。响应式检查使用桌面浏览器。用户已授权本次上线。
 
 截图：`portfolio-home-no-password.png`、`portfolio-flowers-reading-two-columns.png`、`portfolio-dahe-added-application.png`。
+
+### 2026-10-26 删除祝农丰与校园基建
+
+列表核对共7个作品链接，品牌筛选仅艺心为民1项，已无 zhunongfeng／campus 入口；其余图片计数保持。生产构建、五项导航测试、diff检查通过。截图：portfolio-seven-projects.png。

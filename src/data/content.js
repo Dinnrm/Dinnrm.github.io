@@ -85,13 +85,7 @@ export const projects = [
     descEn: 'A book exploring the research and contemporary transformation of painted pottery patterns from the Yellow River basin. Cultural context, geography, vessel forms and pattern analysis form a continuous narrative. An earthy brown cover and fine texture evoke clay and fire, while classification tables, visual atlases and pattern studies organize the interior. Cultural product and packaging applications connect the research to contemporary design.',
     categories: ['book'], bookDetails: daheBookDetails, coverImages: ['dahe-cover'], images: daheBookDetails.sections.flatMap(section => section.images),
   },
-  {
-    id: 'zhunongfeng', coverTitle: '祝农丰 · 科小七', coverTitleEn: 'Zhunongfeng · Ke Xiaoqi', tag: '品牌设计', tagEn: 'Brand identity', title: '祝农丰、科小七品牌设计', titleEn: 'Zhunongfeng & Ke Xiaoqi · Brand identity', categories: ['brand'],
-  },
-  {
-    id: 'campus', coverTitle: '山东艺术学院', coverTitleEn: 'Shandong University of Arts', tag: '校园服务', tagEn: 'Campus', title: '山东艺术学院基建设计', titleEn: 'Shandong University of Arts · Infrastructure design',
-    desc: '山东艺术学院暑期基建项目设计服务。', descEn: 'Design services for summer infrastructure projects at Shandong University of Arts.', categories: ['other'],
-  },
+
 ]
 
 export const designWorks = [
