@@ -25,19 +25,19 @@ export const yixinCaseStudy = {
       images: ['yixin-cap', 'yixin-badge', 'yixin-polo', 'yixin-vest', 'yixin-stationery', 'yixin-pass', 'yixin-tote', 'yixin-paper-goods', 'yixin-wayfinding', 'yixin-storefront'],
     },
     {
-      id: 'onsite', title: '实景应用', titleEn: 'Identity in use', wideImages: ['yixin-site-facade'],
+      id: 'onsite', title: '实景应用', titleEn: 'Identity in use', aspectRatio: '16 / 10',
       text: '从基层文化馆门头、服务空间到公益课堂与文化活动，统一的品牌识别进入真实公共场景。服装、胸章和空间标识共同传递“家门口的文化馆”的服务温度。',
       textEn: 'The identity appears on cultural-center facades, in service spaces, classrooms and community activities. Clothing, badges and signage bring the idea of a cultural center close to home into real public settings.',
       images: ['yixin-site-facade', 'yixin-site-meeting', 'yixin-site-reception', 'yixin-site-merchandise', 'yixin-site-class', 'yixin-site-vest', 'yixin-site-badge'],
     },
     {
-      id: 'media', title: '媒体记录', titleEn: 'Press coverage', columns: 3,
+      id: 'media', title: '媒体记录', titleEn: 'Press coverage', columns: 3, aspectRatio: '3 / 4',
       text: '项目展板收录了相关媒体报道，并记录了 92 个基层服务点位、113 门免费课程及累计 4 万余人次的服务覆盖。统一品牌与社区课程共同构建贴近群众的公共文化服务形象。',
       textEn: 'The supplied project boards document press coverage and a service network of 92 local venues, 113 free courses and more than 40,000 participant visits. The identity and community programs together give public cultural services a recognizable presence.',
       images: ['yixin-press-1', 'yixin-press-2', 'yixin-press-3'],
     },
     {
-      id: 'community', title: '社区反馈', titleEn: 'Community experiences',
+      id: 'community', title: '社区反馈', titleEn: 'Community experiences', aspectRatio: '16 / 9',
       text: '展板记录了吕剧、太极、绘画与美妆等课程中的社区故事。课程从群众需求出发，让传统文化、日常技能与邻里交流在家门口发生。',
       textEn: 'The boards record community experiences in Lü opera, tai chi, painting and makeup classes. Programs respond to local interests, bringing traditional culture, practical skills and social connection closer to home.',
       images: ['yixin-community-opera', 'yixin-community-taichi', 'yixin-community-painting', 'yixin-community-makeup'],

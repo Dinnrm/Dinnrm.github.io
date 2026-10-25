@@ -1,6 +1,7 @@
 // 站点内容（来自 个人介绍.docx）。修改只动这里。
 import { flowersBookDetails } from './flowersBook.js'
 import { yixinCaseStudy } from './yixin.js'
+import { daheBookDetails } from './daheBook.js'
 
 export const profile = {
   name: '丁若木',
@@ -77,6 +78,12 @@ export const projects = [
     desc: "作为原创音乐剧《花儿永远这样红》的配套出版物，以红花意象、民族织物纹样和热烈的红色构建视觉叙事，融合舞台剧照、主创信息与曲谱。装帧采用锁线精装与双层封套，通过白色特种纸异形模切、内层红色封面及烫金标题，呼应“守护繁花”的故事内核，传递鲁疆同心、民族团结的主题。",
     descEn: "A companion publication for the musical “The Flowers Are Always So Red,” combining flower imagery, traditional textile patterns and vivid red with stage photographs, creative-team information and musical scores. A sewn hardcover and two-layer sleeve pair die-cut white specialty paper with a red inner cover and gold-foil title. The layered construction echoes the story’s idea of protecting flowers and its themes of solidarity between Shandong and Xinjiang.",
     categories: ['book'], bookDetails: flowersBookDetails, coverImages: ['flowers-book-cover-mockup-1'], images: flowersBookDetails.sections.flatMap(section => section.images),
+  },
+  {
+    id: 'dahe-book', coverTitle: '大河陶章', coverTitleEn: 'Dahe Pottery', tag: '书籍装帧', tagEn: 'Book design', title: '《大河陶章》书籍装帧设计', titleEn: '“Dahe Pottery” · Book design',
+    desc: '围绕黄河流域彩陶纹样的梳理与当代转化，将文化综述、地域分布、器物形态与纹样解析整合为连贯的书籍叙事。封面以陶土棕色与细密纹理呼应“土与火”的文化意象，内页通过分类表格、信息图谱和纹样推演建立清晰的阅读层次，并延展至文创与包装应用，呈现从文化研究到设计转化的完整路径。',
+    descEn: 'A book exploring the research and contemporary transformation of painted pottery patterns from the Yellow River basin. Cultural context, geography, vessel forms and pattern analysis form a continuous narrative. An earthy brown cover and fine texture evoke clay and fire, while classification tables, visual atlases and pattern studies organize the interior. Cultural product and packaging applications connect the research to contemporary design.',
+    categories: ['book'], bookDetails: daheBookDetails, coverImages: ['dahe-cover'], images: daheBookDetails.sections.flatMap(section => section.images),
   },
   {
     id: 'zhunongfeng', coverTitle: '祝农丰 · 科小七', coverTitleEn: 'Zhunongfeng · Ke Xiaoqi', tag: '品牌设计', tagEn: 'Brand identity', title: '祝农丰、科小七品牌设计', titleEn: 'Zhunongfeng & Ke Xiaoqi · Brand identity', categories: ['brand'],

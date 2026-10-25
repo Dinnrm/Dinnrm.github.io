@@ -1,3 +1,27 @@
+import dahe_applications_3_320 from '../assets/projects/dahe-applications-3-320.webp'
+import dahe_applications_3_960 from '../assets/projects/dahe-applications-3-960.webp'
+import dahe_cover_320 from '../assets/projects/dahe-cover-320.webp'
+import dahe_cover_960 from '../assets/projects/dahe-cover-960.webp'
+import dahe_contents_320 from '../assets/projects/dahe-contents-320.webp'
+import dahe_contents_960 from '../assets/projects/dahe-contents-960.webp'
+import dahe_geography_320 from '../assets/projects/dahe-geography-320.webp'
+import dahe_geography_960 from '../assets/projects/dahe-geography-960.webp'
+import dahe_atlas_320 from '../assets/projects/dahe-atlas-320.webp'
+import dahe_atlas_960 from '../assets/projects/dahe-atlas-960.webp'
+import dahe_catalog_1_320 from '../assets/projects/dahe-catalog-1-320.webp'
+import dahe_catalog_1_960 from '../assets/projects/dahe-catalog-1-960.webp'
+import dahe_catalog_2_320 from '../assets/projects/dahe-catalog-2-320.webp'
+import dahe_catalog_2_960 from '../assets/projects/dahe-catalog-2-960.webp'
+import dahe_color_transformation_320 from '../assets/projects/dahe-color-transformation-320.webp'
+import dahe_color_transformation_960 from '../assets/projects/dahe-color-transformation-960.webp'
+import dahe_motif_transformation_320 from '../assets/projects/dahe-motif-transformation-320.webp'
+import dahe_motif_transformation_960 from '../assets/projects/dahe-motif-transformation-960.webp'
+import dahe_pattern_development_320 from '../assets/projects/dahe-pattern-development-320.webp'
+import dahe_pattern_development_960 from '../assets/projects/dahe-pattern-development-960.webp'
+import dahe_applications_1_320 from '../assets/projects/dahe-applications-1-320.webp'
+import dahe_applications_1_960 from '../assets/projects/dahe-applications-1-960.webp'
+import dahe_applications_2_320 from '../assets/projects/dahe-applications-2-320.webp'
+import dahe_applications_2_960 from '../assets/projects/dahe-applications-2-960.webp'
 import yixin_colors_320 from '../assets/projects/yixin-colors-320.webp'
 import yixin_colors_960 from '../assets/projects/yixin-colors-960.webp'
 import shoumo_cover_320 from '../assets/projects/shoumo-cover-320.webp'
@@ -165,6 +189,18 @@ import kunlun_print_320 from '../assets/projects/kunlun-print-320.webp'
 import kunlun_print_960 from '../assets/projects/kunlun-print-960.webp'
 
 export const projectImages = {
+  'dahe-applications-3': { caption: '手袋、家居与餐具应用', captionEn: 'Bags, home textiles and tableware applications', width: 2478, height: 1858, thumb: dahe_applications_3_320, medium: dahe_applications_3_960 },
+  'dahe-cover': { caption: "书籍封面与封底效果", captionEn: "Front and back cover presentation", width: 4000, height: 2670, thumb: dahe_cover_320, medium: dahe_cover_960 },
+  'dahe-contents': { caption: "目录与章节秩序", captionEn: "Contents and chapter structure", width: 2478, height: 1858, thumb: dahe_contents_320, medium: dahe_contents_960 },
+  'dahe-geography': { caption: "文化地域与空间图谱", captionEn: "Cultural geography and spatial atlas", width: 2478, height: 1858, thumb: dahe_geography_320, medium: dahe_geography_960 },
+  'dahe-atlas': { caption: "器型与纹样分类总览", captionEn: "Vessel forms and pattern classification", width: 2478, height: 1858, thumb: dahe_atlas_320, medium: dahe_atlas_960 },
+  'dahe-catalog-1': { caption: "彩陶文化类型梳理 · 一", captionEn: "Painted pottery classification \u00b7 I", width: 2478, height: 1858, thumb: dahe_catalog_1_320, medium: dahe_catalog_1_960 },
+  'dahe-catalog-2': { caption: "彩陶文化类型梳理 · 二", captionEn: "Painted pottery classification \u00b7 II", width: 2478, height: 1858, thumb: dahe_catalog_2_320, medium: dahe_catalog_2_960 },
+  'dahe-color-transformation': { caption: "色彩提取与图形衍生", captionEn: "Color extraction and graphic development", width: 2478, height: 1858, thumb: dahe_color_transformation_320, medium: dahe_color_transformation_960 },
+  'dahe-motif-transformation': { caption: "纹饰解构与重组", captionEn: "Motif deconstruction and recomposition", width: 2478, height: 1858, thumb: dahe_motif_transformation_320, medium: dahe_motif_transformation_960 },
+  'dahe-pattern-development': { caption: "纹样单元与连续图形", captionEn: "Pattern units and repeating graphics", width: 2478, height: 1858, thumb: dahe_pattern_development_320, medium: dahe_pattern_development_960 },
+  'dahe-applications-1': { caption: "文具与文创应用", captionEn: "Stationery and cultural product applications", width: 2478, height: 1858, thumb: dahe_applications_1_320, medium: dahe_applications_1_960 },
+  'dahe-applications-2': { caption: "纺织与包装应用", captionEn: "Textile and packaging applications", width: 2478, height: 1858, thumb: dahe_applications_2_320, medium: dahe_applications_2_960 },
   'yixin-colors': { whiteSurface: true, caption: "标准色彩", captionEn: "Brand color palette", width: 1064, height: 515, note: "标准色彩延续主标志的红橙暖调。橙色呼应暖阳与活力，红色传递艺术的温度与人文关怀，深红强化稳重的品牌识别；通过同一色系的呼应，让社区宣传、印刷物料与空间应用保持温暖、亲和的整体感。", noteEn: "The palette extends the warm red-orange tones of the main mark. Orange suggests sunlight and vitality, red conveys warmth and care, and deep red gives the identity visual weight. Together, they connect community communications, printed materials and spatial applications.", thumb: yixin_colors_320, medium: yixin_colors_960 },
   'shoumo-cover': { caption: '守墨非遗海报效果展示', captionEn: 'Shoumo heritage poster presentation', width: 6000, height: 4000, thumb: shoumo_cover_320, medium: shoumo_cover_960 },
   'shen-cover': { caption: '《慎》系列海报效果展示', captionEn: 'Shen poster series presentation', width: 4000, height: 3000, thumb: shen_cover_320, medium: shen_cover_960 },

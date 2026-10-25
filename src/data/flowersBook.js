@@ -23,7 +23,7 @@ export const flowersBookDetails = {
       images: ['flowers-book-spread-1', 'flowers-book-spread-2', 'flowers-book-spread-3', 'flowers-book-spread-4', 'flowers-book-spread-5', 'flowers-book-spread-6'],
     },
     {
-      id: 'reading', title: '阅读与细节', titleEn: 'Reading & details',
+      id: 'reading', title: '阅读与细节', titleEn: 'Reading & details', columns: 2,
       text: '从扉页、目录到剧情、演员介绍与音乐剧曲谱，在连贯的翻阅节奏中保存舞台艺术与音乐文本，使剧目的故事和音乐得以继续传播。',
       textEn: 'From the opening pages and contents to the story, cast and musical scores, a consistent reading rhythm preserves the stage production and its music in a lasting printed form.',
       images: Array.from({ length: 9 }, (_, index) => `flowers-book-reading-${index + 1}`),
