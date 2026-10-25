@@ -131,8 +131,6 @@ import flowers_book_reading_7_320 from '../assets/projects/flowers-book-reading-
 import flowers_book_reading_7_960 from '../assets/projects/flowers-book-reading-7-960.webp'
 import flowers_book_reading_8_320 from '../assets/projects/flowers-book-reading-8-320.webp'
 import flowers_book_reading_8_960 from '../assets/projects/flowers-book-reading-8-960.webp'
-import flowers_book_reading_9_320 from '../assets/projects/flowers-book-reading-9-320.webp'
-import flowers_book_reading_9_960 from '../assets/projects/flowers-book-reading-9-960.webp'
 
 import shoumo_brush_320 from '../assets/projects/shoumo-brush-320.webp'
 import shoumo_brush_960 from '../assets/projects/shoumo-brush-960.webp'
@@ -255,7 +253,6 @@ export const projectImages = {
   'flowers-book-reading-6': { caption: '演员介绍阅读效果', captionEn: 'Cast profiles mockup', width: 998, height: 748, thumb: flowers_book_reading_6_320, medium: flowers_book_reading_6_960 },
   'flowers-book-reading-7': { caption: '主创与曲目阅读效果', captionEn: 'Creative team and track listing', width: 1003, height: 753, thumb: flowers_book_reading_7_320, medium: flowers_book_reading_7_960 },
   'flowers-book-reading-8': { caption: '音乐剧曲谱 · 一', captionEn: 'Musical score · I', width: 999, height: 749, thumb: flowers_book_reading_8_320, medium: flowers_book_reading_8_960 },
-  'flowers-book-reading-9': { caption: '音乐剧曲谱 · 二', captionEn: 'Musical score · II', width: 996, height: 748, thumb: flowers_book_reading_9_320, medium: flowers_book_reading_9_960 },
   'kunlun-stage': { caption: '大会现场主视觉', captionEn: 'Conference key visual on site', width: 4032, height: 3024, thumb: kunlun_stage_320, medium: kunlun_stage_960 },
   'kunlun-key': { caption: '赛事主视觉画面', captionEn: 'Competition key visual', width: 31496, height: 10709, thumb: kunlun_key_320, medium: kunlun_key_960 },
   'kunlun-outdoor': { caption: '户外展架实景', captionEn: 'Outdoor display in use', width: 3013, height: 2260, thumb: kunlun_outdoor_320, medium: kunlun_outdoor_960 },
